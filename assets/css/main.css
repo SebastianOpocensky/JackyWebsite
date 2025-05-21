@@ -1427,8 +1427,8 @@ input, select, textarea {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		width: 45em;
-		max-width: 50%;
+		width: 100%;
+		max-width: 100%;
 		margin: 0 auto 2em auto;
 	}
 
@@ -2333,7 +2333,13 @@ input, select, textarea {
 }
 
 .feature {
-  flex: 1 1 calc(25% - 2rem);
+  flex: 1 1 calc(25% - 2rem); /* Four items per row, with spacing */
+  max-width: calc(25% - 2rem); /* Prevents overflowing */
+  padding: 1.5rem;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
@@ -2344,11 +2350,11 @@ input, select, textarea {
 }
 
 .feature h3 {
-  margin: 0.5rem 0;
-  font-size: 1.2em;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .feature p {
-  font-size: 0.9em;
-  color: #666;
+  margin-top: 0.5rem;
+  line-height: 1.5;
 }
