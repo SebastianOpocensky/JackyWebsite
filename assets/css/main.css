@@ -2322,3 +2322,33 @@ input, select, textarea {
 	margin-top: 0.5em;
 	font-size: 1.2em;
 }
+
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature {
+  flex: 1 1 calc(25% - 2rem);
+  text-align: center;
+}
+
+.feature img {
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.feature h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2em;
+}
+
+.feature p {
+  font-size: 0.9em;
+  color: #666;
+}
