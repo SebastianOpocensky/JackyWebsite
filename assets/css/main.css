@@ -2385,3 +2385,20 @@ input, select, textarea {
   color: #ccc;
   text-align: right;
 }
+
+@media (max-width: 768px) {
+  .features-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .feature {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .feature img {
+    max-width: 80px;
+  }
+}
