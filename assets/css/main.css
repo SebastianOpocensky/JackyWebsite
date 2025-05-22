@@ -2400,5 +2400,11 @@ input, select, textarea {
 
   .feature img {
     max-width: 80px;
+    margin: 0 auto 1rem;
+  }
+
+  .feature h3,
+  .feature p {
+    text-align: center;
   }
 }
