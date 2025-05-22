@@ -1427,8 +1427,8 @@ input, select, textarea {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		width: 100%;
-		max-width: 100%;
+		width: 50%;
+		max-width: 50%;
 		margin: 0 auto 2em auto;
 	}
 
@@ -2357,4 +2357,31 @@ input, select, textarea {
 .feature p {
   margin-top: 0.5rem;
   line-height: 1.5;
+}
+
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 2rem;
+  max-width: 400px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+}
+
+.popup.active {
+  display: block;
+}
+
+.popup-close {
+  cursor: pointer;
+  display: block;
+  margin-top: 1rem;
+  color: #ccc;
+  text-align: right;
 }
