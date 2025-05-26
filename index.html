@@ -30,7 +30,7 @@
 						<li><a href="#intro">Intro</a></li>
 						<li><a href="#mission">Mission</a></li>
 						<li><a href="#about">About</a></li>
-						<li><a href="#work">Offers</a></li>
+						<li><a href="#offers">Offers</a></li>
 						<li><a href="#references">References</a></li>
 						<li><a href="#whyus">Why us</a></li>
 						<li><a href="#podcast">Podcast</a></li>
@@ -122,12 +122,15 @@
 					<p>As a Certified Systemic Coach and fully certified Breathwork Instructor all I aim for is to help you detect imbalance, find the right path for you and sustainably prevent from severe burnout.</p>
 					<p></p>
 				</div>
-				<a href="#work" class="button style2 down anchored">Next</a>
+				<a href="#offers" class="button style2 down anchored">Next</a>
 			</section>
 
 		
-		<!-- Work -->
-			<section id="work" class="main style3 secondary">
+<p><a href="pages/awakening.html">Testlink zur Awakening-Seite</a></p>
+
+
+		<!-- Offers -->
+			<section id="offers" class="main style3 secondary">
 				<div class="content">
 					<header>
 					<h2>My Offers</h2>
@@ -138,41 +141,43 @@
 
 					<div class="features-grid" style="display: flex; gap: 2rem; flex-wrap: wrap;">
 					<article class="from-left">
-						<a href="#" class="feature-image">
+						<a href="pages/awakening.html" class="feature-image">
 							<img src="images/offers/Awakening.png" alt="Feature 1">
 						</a>
 						<h3 class="caption">The Awakening</h3>
 						<p class="feature-description">
+							Am I still on the right paht?
 						</p>
 					</article>
 
 					<article class="from-left">
-						<a href="#" class="feature-image">
+						<a href="pages/safe_space.html" class="feature-image">
 							<img src="images/offers/SafeSpace.png" alt="Feature 2">
 						</a>
 						<h3 class="caption">The Safe Space</h3>
 						<p class="feature-description">
-							
+							Relight your fire without getting burned.
 						</p>
 					</article>
 
 					<article class="from-right">
-						<a href="#" class="feature-image">
+						<a href="pages/fearless.html" class="feature-image">
 							<img src="images/offers/Union.png" alt="Feature 3">
 						</a>
 						<h3 class="caption">The Union</h3>
 						<p class="feature-description">
-							
+							Support them on their new path.
 						</p>
 					</article>
 
+					<!--ACTUAL PICTURE NEEDED!!!!!!!!!!!!!!!!!!!! -->
 					<article class="from-right">
-						<a href="#" class="feature-image">
+						<a href="pages/union.html" class="feature-image">
 							<img src="images/offers/Union.png" alt="Feature 4">
 						</a>
 						<h3 class="caption">Fearless</h3>
 						<p class="feature-description">
-							
+							What would you do, if you weren't afraid?
 						</p>
 					</article>
 
@@ -210,7 +215,7 @@
 
 					<div class="features-grid" style="display: flex; gap: 2rem; flex-wrap: wrap;">
 					<article class="feature">
-						<a href="#" class="feature-image" data-popup="popup1">
+						<a href="#" class="feature-image feature-popup" data-popup="popup1">
 							<img src="images/offers/100YOU.png" alt="Feature 1">
 						</a>
 						<h3 class="caption">100% You</h3>
@@ -219,7 +224,7 @@
 					</article>
 
 					<article class="feature">
-						<a href="#" class="feature-image" data-popup="popup2">
+						<a href="#" class="feature-image feature-popup" data-popup="popup2">
 							<img src="images/offers/Commitment.png" alt="Feature 2">
 						</a>
 						<h3 class="caption">Maximum Commitment</h3>
@@ -229,7 +234,7 @@
 					</article>
 
 					<article class="feature">
-						<a href="#" class="feature-image" data-popup="popup3">
+						<a href="#" class="feature-image feature-popup" data-popup="popup3">
 							<img src="images/offers/Together.png" alt="Feature 3">
 						</a>
 						<h3 class="caption">You pull, we push</h3>
@@ -239,7 +244,7 @@
 					</article>
 
 					<article class="feature">
-						<a href="#" class="feature-image" data-popup="popup4">
+						<a href="#" class="feature-image feature-popup" data-popup="popup4">
 							<img src="images/offers/Together.png" alt="Feature 4">
 						</a>
 						<h3 class="caption">Long-term results</h3>
@@ -275,11 +280,11 @@
 			</section>
 
 		<script>
-		// Feature image click handler
-		document.querySelectorAll('.feature-image').forEach(el => {
+		// Nur .feature-popup Elemente bekommen die Popup-Logik
+		document.querySelectorAll('.feature-popup').forEach(el => {
 			el.addEventListener('click', function (e) {
-			e.preventDefault();          // 🛑 Prevent link jump to top
-			e.stopPropagation();         // 🛑 Stop other handlers (e.g., poptrox/lightbox)
+			e.preventDefault();          // Nur für Popups blockieren
+			e.stopPropagation();
 
 			const popupId = this.dataset.popup;
 			document.querySelectorAll('.popup').forEach(p => p.classList.remove('active'));
@@ -287,7 +292,7 @@
 			});
 		});
 
-		// Popup close handler
+		// Popup schließen
 		document.querySelectorAll('.popup-close').forEach(btn => {
 			btn.addEventListener('click', function () {
 			this.closest('.popup').classList.remove('active');
