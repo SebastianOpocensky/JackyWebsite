@@ -2408,3 +2408,16 @@ input, select, textarea {
     text-align: center;
   }
 }
+
+.from-right {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: fromRightFadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fromRightFadeIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
