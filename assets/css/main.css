@@ -2427,6 +2427,14 @@ input, select, textarea {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+  padding: 0 2rem;               /* horizontal padding */
+  max-width: 1200px;             /* limits stretch */
+  margin: 0 auto;                /* centers the container */
+}
+
+.image-box img {
+  max-width: 300px;
+  border-radius: 1rem;
 }
 
 /* Mobil-Optimierung */
