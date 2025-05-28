@@ -2444,3 +2444,15 @@ input, select, textarea {
     align-items: center;
   }
 }
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-title img {
+  height: 40px;
+  width: auto;
+}
+
