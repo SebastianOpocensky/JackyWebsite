@@ -23,7 +23,12 @@
 		<!-- Header -->
 			<header id="header">
 				<h1 class="logo-title">
-					<img src="images/examp2.jpg" alt="Logo" style="height: 40px; width: auto;">
+					<button id="menuToggle" aria-label="Toggle Menu">
+            			<img src="images/examp2.jpg" alt="Logo" style="height: 40px; width: auto;">
+        			</button>
+
+
+					
 					
 					<!-- Titel wurde hier auskommentiert:
 					Who I AM 
@@ -420,6 +425,20 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+
+
+			<script>
+				const toggleButton = document.getElementById('menuToggle');
+				const menu = document.getElementById('dropdownMenu');
+
+				toggleButton.addEventListener('click', () => {
+					menu.classList.toggle('visible');
+					menu.classList.toggle('hidden');
+					});
+			</script>
+			
+
 
 	</body>
 </html>

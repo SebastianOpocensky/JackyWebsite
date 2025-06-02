@@ -2456,3 +2456,49 @@ input, select, textarea {
   width: auto;
 }
 
+#dropdownMenu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#dropdownMenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#dropdownMenu li {
+    margin: 8px 0;
+}
+
+#dropdownMenu a {
+    text-decoration: none;
+    color: #333;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+#menuToggle {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+#menuToggle img {
+    display: block;
+}
