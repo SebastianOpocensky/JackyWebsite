@@ -662,7 +662,7 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out;
-		background-color: #98c593;
+		background-color: #d5d6fe;
 		border: 0;
 		border-radius: 3.5em;
 		color: #ffffff;
@@ -676,6 +676,34 @@ input, select, textarea {
 		text-align: center;
 		text-decoration: none;
 	}
+
+		input[type="button"].right,
+		input[type="submit"].right,
+		input[type="reset"].right,
+		.button.right,
+		button.right {
+			width: 5em;
+			height: 5em;
+			line-height: 4.5em;
+			border-radius: 50%;
+			padding: 0;
+			background-image: url("images/rightarrow2.svg");
+			background-position: center center;
+			background-repeat: no-repeat;
+			text-indent: -10em;
+			overflow: hidden;
+		}
+
+			input[type="button"].right.anchored,
+			input[type="submit"].right.anchored,
+			input[type="reset"].right.anchored,
+			.button.right.anchored,
+			button.right.anchored {
+				bottom: 0;
+				border-radius: 50%;
+				height: 4.5em;
+				margin-top: -2.5em;
+			}
 
 		input[type="button"].down,
 		input[type="submit"].down,
@@ -762,6 +790,26 @@ input, select, textarea {
 			.button.style2.down,
 			button.style2.down {
 				background-image: url("images/arrow.svg");
+			}
+
+			input[type="button"].style2.right,
+			input[type="submit"].style2.right,
+			input[type="reset"].style2.right,
+			.button.style2.right,
+			button.style2.right {
+				background-image: url("images/right-arrow.svg");
+			}
+
+
+			.button-with-text {
+				display: flex;
+				align-items: center;
+				gap: 1em;
+			}
+
+			.button-with-text .button-label {
+				color: #000000;
+				font-weight: 600;
 			}
 
 /* Form */
@@ -2502,3 +2550,4 @@ input, select, textarea {
 #menuToggle img {
     display: block;
 }
+
