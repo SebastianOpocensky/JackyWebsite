@@ -747,7 +747,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		.button:hover,
 		button:hover {
-			background-color: #a8cea4;
+			background-color: #fc9e7b;
 		}
 
 		input[type="button"]:active,
@@ -755,7 +755,7 @@ input, select, textarea {
 		input[type="reset"]:active,
 		.button:active,
 		button:active {
-			background-color: #88bc82;
+			background-color: #fc9e7b;
 		}
 
 		input[type="button"].style2,
@@ -2102,6 +2102,52 @@ input, select, textarea {
 			.main.style3.secondary {
 				background: #f5f6f7;
 			}
+
+
+
+		.main.style4 {
+				text-align: left;
+				padding: 6em 0 6em 0;
+				background: #f5f6f7; /* gleiche Hintergrundfarbe wie .style3.secondary, falls gewünscht */
+			}
+
+			.main.style4 form {
+				text-align: left;
+				display: flex;
+				flex-direction: column;
+				gap: 1em;
+			}
+
+			.main.style4 button[type="submit"] {
+				align-self: flex-center; /* oder center, wenn du zentrieren willst */
+				font-size: 1.0em;
+				padding: 1em 2.0em;
+			}
+
+			.main.style4 button.style3 {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			
+			.main.style4 .content > header {
+				margin-bottom: 2em;
+				text-align: center; /* optional: Überschrift zentriert lassen */
+			}
+
+			.main.style4 form label {
+				display: block;
+				text-align: left;
+				margin-bottom: 1em;
+			}
+
+			.main.style4 form input,
+			.main.style4 form textarea {
+				width: 100%;
+				box-sizing: border-box;
+			}
+
 
 		.main.dark {
 			color: #ffffff;
