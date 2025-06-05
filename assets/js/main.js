@@ -22,11 +22,23 @@
 		});
 
 	// Play initial animations on page load.
-		$window.on('load', function() {
-			setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+    $window.on('load', function() {
+        setTimeout(function() {
+            $body.removeClass('is-preload');
+        }, 100);
+
+        // Menu toggle for dropdown
+        $('#menuToggle').on('click', function () {
+            $('#dropdownMenu').toggleClass('hidden visible');
+        });
+
+        // Close dropdown when clicking outside
+        $(document).on('click', function (event) {
+            if (!$(event.target).closest('#menuToggle, #dropdownMenu').length) {
+                $('#dropdownMenu').removeClass('visible').addClass('hidden');
+            }
+        });
+    });
 
 	// Touch mode.
 		if (browser.mobile)

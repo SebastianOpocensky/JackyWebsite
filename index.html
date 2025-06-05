@@ -12,6 +12,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 	</head>
 	
 	
@@ -23,21 +25,19 @@
 		<!-- Header -->
 			<header id="header">
 				<h1 class="logo-title">
-					<button id="menuToggle" aria-label="Toggle Menu">
-            			<img src="images/examp2.jpg" alt="Logo" style="height: 40px; width: auto;">
-        			</button>
-
-
+					<button id="menuToggle">
+						<img src="images/examp2.jpg" alt="Logo">
+					</button>
 					
-					
-					<!-- Titel wurde hier auskommentiert:
-					Who I AM 
+					<!--
+					<a href="#">WHO I AM</a>
 					-->
+				</h1>
 
 				</h1>
 				<nav>
 					<ul>
-						<li><a href="#intro">Intro</a></li>
+						<li><a href="#intro">Introduction</a></li>
 						<li><a href="#mission">Mission</a></li>
 						<li><a href="#about">About</a></li>
 						<li><a href="#offers">Offers</a></li>
@@ -48,6 +48,20 @@
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</nav>
+
+				<div id="dropdownMenu" class="hidden">
+					<ul>
+						<li><a href="#intro">Introduction</a></li>
+						<li><a href="#mission">Mission</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#offers">Offers</a></li>
+						<li><a href="#retreat">Retreat</a></li>
+						<li><a href="#references">References</a></li>
+						<li><a href="#whyus">Why us</a></li>
+						<li><a href="#podcast">Podcast</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
 			</header>
 
 		<!-- Intro -->
@@ -437,19 +451,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
-
-
-			<script>
-				const toggleButton = document.getElementById('menuToggle');
-				const menu = document.getElementById('dropdownMenu');
-
-				toggleButton.addEventListener('click', () => {
-					menu.classList.toggle('visible');
-					menu.classList.toggle('hidden');
-					});
-			</script>
-			
 
 
 	</body>
