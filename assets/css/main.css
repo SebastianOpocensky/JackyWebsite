@@ -2203,19 +2203,26 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 1280px) {
-
 			.main.style2 .content {
-				width: 50%;
+				width: 65%; /* Erhöht von 50% auf 65% für längere Zeilen */
+				max-width: 55em; /* Etwas schmaler als 60em, aber mehr Platz als zuvor */
 			}
-
+			.content-container {
+				max-width: 100%; /* Entfernt die 1200px-Beschränkung für mehr Breite */
+				padding: 0 1rem; /* Etwas weniger Padding für mehr nutzbaren Raum */
+			}
+			.content.box.right p {
+				font-size: 14pt; /* Etwas größere Schrift für bessere Lesbarkeit */
+				line-height: 1.5em; /* Kompakter Zeilenabstand für längere Zeilen */
+				margin-bottom: 0.75em;
+			}
 		}
 
 		@media screen and (max-width: 1000px) {
-
 			.main.style2 .content {
-				width: 60%;
+				width: 70%; /* Noch breitere Anpassung für etwas kleinere Bildschirme */
+				max-width: 100%; /* Maximale Flexibilität */
 			}
-
 		}
 
 		@media screen and (max-width: 736px) {
@@ -2283,8 +2290,9 @@ input, select, textarea {
 
 		/* Class to trigger the animation when the element is in view */
 		.content.box.right.visible {
-			opacity: 1; /* Fully visible */
-			transform: translateX(0); /* Move to original position */
+			opacity: 1;  
+			transform: translateX(0);  
+			
 		}
 
 		/* Ensure the container doesn't clip the animation */
@@ -2298,6 +2306,15 @@ input, select, textarea {
     		max-width: 1400px; /* Erhöhte Breite für mehr Raum */
     		margin: 0 auto;
 		}
+
+		@media screen and (max-width: 736px) {
+			.content.box.right {
+				opacity: 1 !important;
+				transform: none !important;
+				transition: none !important;
+			}
+}
+
 
 /* Footer */
 
@@ -2574,13 +2591,6 @@ input, select, textarea {
   border-radius: 1rem;
 }
 
-/* Mobil-Optimierung */
-@media (max-width: 768px) {
-  .content-container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
 
 .logo-title {
   display: flex;
