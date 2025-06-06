@@ -497,6 +497,7 @@ input, select, textarea {
 
 	}
 
+
 /* Type */
 
 	body, input, textarea, select {
@@ -2068,8 +2069,10 @@ input, select, textarea {
 				-ms-transform: translateZ(0);
 				transform: translateZ(0);
 				position: relative;
-				width: 35%;
+				width: 50%;				/* Angepasst um Text etwas länger zu machen */
+				max-width: 60em; 
 				margin: 0;
+				box-sizing: border-box;
 			}
 
 			.main.style2.left {
@@ -2268,6 +2271,32 @@ input, select, textarea {
 				max-width: calc(100% - 1.5em);
 			}
 
+		}
+		/* Styling the content box to animate from the right */
+		.content.box.right {
+			opacity: 0; /* Start invisible */
+			transform: translateX(100%); /* Start position: fully shifted to the right */
+			transition: all 0.8s ease-in-out; /* Smooth transition for opacity and position */
+			padding: 1.5em; /* Reduziertes Padding für mehr Textbreite */
+    		box-sizing: border-box;
+		}
+
+		/* Class to trigger the animation when the element is in view */
+		.content.box.right.visible {
+			opacity: 1; /* Fully visible */
+			transform: translateX(0); /* Move to original position */
+		}
+
+		/* Ensure the container doesn't clip the animation */
+		.content-container {
+			overflow: hidden; /* Prevent content from being cut off during animation */
+			display: flex; /* Assuming flexbox for layout, adjust if needed */
+			justify-content: space-between; /* Adjust based on your layout */
+			align-items: center; /* Vertical centering, adjust as needed */
+			gap: 1.5rem; /* Reduzierter Abstand für mehr Platz */
+    		padding: 0 1.5rem; /* Weniger Padding für breitere Inhalte */
+    		max-width: 1400px; /* Erhöhte Breite für mehr Raum */
+    		margin: 0 auto;
 		}
 
 /* Footer */
@@ -2675,3 +2704,5 @@ input, select, textarea {
         left: 0;
     }
 }
+
+

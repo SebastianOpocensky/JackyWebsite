@@ -170,6 +170,17 @@
 							leave:		function() { $(this).addClass('inactive'); }
 						});
 
+					$('.content.box.right')
+						.scrollex({
+							top:        '30vh',
+							bottom:     '30vh',
+							delay:      50,
+							initialize: function() { $(this).removeClass('visible'); },
+							terminate:  function() { $(this).removeClass('visible'); },
+							enter:      function() { $(this).addClass('visible'); },
+							leave:      function() { $(this).removeClass('visible'); }
+						});
+
 			};
 
 			var off = function() {
@@ -187,6 +198,10 @@
 
 				// Contact.
 					$('#contact')
+						.unscrollex();
+
+				// Content box right.
+					$('.content.box.right')
 						.unscrollex();
 
 			};
