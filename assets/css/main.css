@@ -2719,7 +2719,7 @@ input, select, textarea {
 /* Neue Mission Section */
 
 /* Grundlegende Stile für die Sektion */
-.animated-section {
+.mission-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -2735,7 +2735,7 @@ input, select, textarea {
     max-width: 40%;
 }
 
-.animated-image {
+.mission-image {
     width: 100%;
     height: auto;
     opacity: 0; /* Start: unsichtbar für Animation */
@@ -2750,33 +2750,33 @@ input, select, textarea {
     text-align: left;
 }
 
-.animated-heading {
+.mission-heading {
     opacity: 0; /* Start: unsichtbar */
     transform: translateX(100%); /* Start: rechts außerhalb des Sichtfelds */
     transition: all 0.8s ease-in-out;
 }
 
-.animated-text {
+.mission-text {
     opacity: 0; /* Start: unsichtbar */
     transform: translateX(100%); /* Start: rechts außerhalb des Sichtfelds */
     transition: all 0.8s ease-in-out 0.2s; /* Leichte Verzögerung für den Text */
 }
 
 /* Klasse, die bei Scroll hinzugefügt wird */
-.animated-image.active {
+.mission-image.active {
     opacity: 1;
     transform: translateX(0); /* Bild fährt von links ein */
 }
 
-.animated-heading.active,
-.animated-text.active {
+.mission-heading.active,
+.mission-text.active {
     opacity: 1;
     transform: translateX(0); /* Überschrift und Text fahren von rechts ein */
 }
 
 /* Responsivität für kleinere Bildschirme */
 @media (max-width: 768px) {
-    .animated-section {
+    .mission-section {
         flex-direction: column;
         padding: 20px;
     }
@@ -2791,15 +2791,15 @@ input, select, textarea {
         text-align: center;
     }
     
-    .animated-heading,
-    .animated-text {
+    .mission-heading,
+    .mission-text {
         transform: translateX(0); /* Keine seitliche Animation auf Mobilgeräten */
         opacity: 0;
         transition: opacity 0.8s ease-in-out;
     }
     
-    .animated-heading.active,
-    .animated-text.active {
+    .mission-heading.active,
+    .mission-text.active {
         opacity: 1;
     }
 }

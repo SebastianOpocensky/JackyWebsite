@@ -246,10 +246,10 @@
 
 			// Mission Section
 			document.addEventListener('DOMContentLoaded', () => {
-				const section = document.querySelector('.animated-section');
-				const image = document.querySelector('.animated-image');
-				const heading = document.querySelector('.animated-heading');
-				const text = document.querySelector('.animated-text');
+				const section = document.querySelector('.mission-section');
+				const image = document.querySelector('.mission-image');
+				const heading = document.querySelector('.mission-heading');
+				const text = document.querySelector('.mission-text');
 
 				// Funktion, um zu prüfen, ob ein Element im Sichtfeld ist
 				function isInViewport(element) {
