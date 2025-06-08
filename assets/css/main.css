@@ -2803,3 +2803,94 @@ input, select, textarea {
         opacity: 1;
     }
 }
+
+/* New About Section */
+
+/* Grundlegende Stile für die Sektion */
+.animated-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    min-height: 80vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Text-Container */
+.text-container {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+}
+
+.animated-heading {
+    opacity: 0; /* Start: unsichtbar */
+    transform: translateX(-100%); /* Start: links außerhalb des Sichtfelds */
+    transition: all 0.8s ease-in-out;
+}
+
+.animated-text {
+    opacity: 0; /* Start: unsichtbar */
+    transform: translateX(-100%); /* Start: links außerhalb des Sichtfelds */
+    transition: all 0.8s ease-in-out 0.2s; /* Leichte Verzögerung für den Text */
+}
+
+/* Bild-Container */
+.image-container {
+    flex: 1;
+    max-width: 40%;
+}
+
+.animated-image {
+    width: 100%;
+    height: auto;
+    opacity: 0; /* Start: unsichtbar für Animation */
+    transform: translateX(100%); /* Start: rechts außerhalb des Sichtfelds */
+    transition: all 0.8s ease-in-out; /* Sanfte Animation */
+}
+
+/* Klasse, die bei Scroll hinzugefügt wird */
+.animated-heading.active,
+.animated-text.active {
+    opacity: 1;
+    transform: translateX(0); /* Überschrift und Text fahren von links ein */
+}
+
+.animated-image.active {
+    opacity: 1;
+    transform: translateX(0); /* Bild fährt von rechts ein */
+}
+
+/* Responsivität für kleinere Bildschirme */
+@media (max-width: 768px) {
+    .animated-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .text-container {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .image-container {
+        max-width: 100%;
+        margin-bottom: 20px;
+        order: -1; /* Bild wird oben angezeigt */
+    }
+    
+    .animated-heading,
+    .animated-text,
+    .animated-image {
+        transform: translateX(0); /* Keine seitliche Animation auf Mobilgeräten */
+        opacity: 0;
+        transition: opacity 0.8s ease-in-out;
+    }
+    
+    .animated-heading.active,
+    .animated-text.active,
+    .animated-image.active {
+        opacity: 1;
+    }
+}

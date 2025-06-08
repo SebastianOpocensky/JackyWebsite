@@ -288,4 +288,37 @@
 				}
 			});
 
+			// About Section
+			document.addEventListener('DOMContentLoaded', () => {
+				const section = document.querySelector('.animated-section');
+				const image = document.querySelector('.animated-image');
+				const heading = document.querySelector('.animated-heading');
+				const text = document.querySelector('.animated-text');
+
+				// Funktion, um zu prüfen, ob ein Element im Sichtfeld ist
+				function isInViewport(element) {
+					const rect = element.getBoundingClientRect();
+					return (
+						rect.top >= 0 &&
+						rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8
+					);
+				}
+
+				// Scroll-Event-Listener
+				window.addEventListener('scroll', () => {
+					if (isInViewport(section)) {
+						image.classList.add('active');
+						heading.classList.add('active');
+						text.classList.add('active');
+					}
+				});
+
+				// Initiale Prüfung, falls die Sektion bereits sichtbar ist
+				if (isInViewport(section)) {
+					image.classList.add('active');
+					heading.classList.add('active');
+					text.classList.add('active');
+				}
+			});
+
 })(jQuery);
