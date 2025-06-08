@@ -243,4 +243,49 @@
 				$window.trigger('resize');
 			});
 
+
+			// Mission Section
+			document.addEventListener('DOMContentLoaded', () => {
+				const section = document.querySelector('.animated-section');
+				const image = document.querySelector('.animated-image');
+				const heading = document.querySelector('.animated-heading');
+				const text = document.querySelector('.animated-text');
+
+				// Funktion, um zu prüfen, ob ein Element im Sichtfeld ist
+				function isInViewport(element) {
+					const rect = element.getBoundingClientRect();
+					const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+					return (
+						rect.top >= -rect.height && // Sektion nicht komplett oben außerhalb
+						rect.bottom <= windowHeight + rect.height // Sektion nicht komplett unten außerhalb
+					);
+				}
+
+				// Scroll-Event-Listener
+				window.addEventListener('scroll', () => {
+					if (isInViewport(section)) {
+						// Elemente einfahren lassen, wenn im Sichtfeld
+						image.classList.add('active');
+						heading.classList.add('active');
+						text.classList.add('active');
+					} else {
+						// Elemente ausfahren lassen, wenn außerhalb des Sichtfelds
+						image.classList.remove('active');
+						heading.classList.remove('active');
+						text.classList.remove('active');
+					}
+				});
+
+				// Initiale Prüfung, falls die Sektion bereits sichtbar ist
+				if (isInViewport(section)) {
+					image.classList.add('active');
+					heading.classList.add('active');
+					text.classList.add('active');
+				} else {
+					image.classList.remove('active');
+					heading.classList.remove('active');
+					text.classList.remove('active');
+				}
+			});
+
 })(jQuery);

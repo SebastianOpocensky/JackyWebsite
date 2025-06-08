@@ -589,7 +589,7 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out;
-		color: #98c593;
+		color: #8785e6;
 	}
 
 	sub {
@@ -2716,3 +2716,90 @@ input, select, textarea {
 }
 
 
+/* Neue Mission Section */
+
+/* Grundlegende Stile für die Sektion */
+.animated-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    min-height: 80vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Bild-Container */
+.image-container {
+    flex: 1;
+    max-width: 40%;
+}
+
+.animated-image {
+    width: 100%;
+    height: auto;
+    opacity: 0; /* Start: unsichtbar für Animation */
+    transform: translateX(-100%); /* Start: links außerhalb des Sichtfelds */
+    transition: all 0.8s ease-in-out; /* Sanfte Animation */
+}
+
+/* Text-Container */
+.text-container {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+}
+
+.animated-heading {
+    opacity: 0; /* Start: unsichtbar */
+    transform: translateX(100%); /* Start: rechts außerhalb des Sichtfelds */
+    transition: all 0.8s ease-in-out;
+}
+
+.animated-text {
+    opacity: 0; /* Start: unsichtbar */
+    transform: translateX(100%); /* Start: rechts außerhalb des Sichtfelds */
+    transition: all 0.8s ease-in-out 0.2s; /* Leichte Verzögerung für den Text */
+}
+
+/* Klasse, die bei Scroll hinzugefügt wird */
+.animated-image.active {
+    opacity: 1;
+    transform: translateX(0); /* Bild fährt von links ein */
+}
+
+.animated-heading.active,
+.animated-text.active {
+    opacity: 1;
+    transform: translateX(0); /* Überschrift und Text fahren von rechts ein */
+}
+
+/* Responsivität für kleinere Bildschirme */
+@media (max-width: 768px) {
+    .animated-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .image-container {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .text-container {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .animated-heading,
+    .animated-text {
+        transform: translateX(0); /* Keine seitliche Animation auf Mobilgeräten */
+        opacity: 0;
+        transition: opacity 0.8s ease-in-out;
+    }
+    
+    .animated-heading.active,
+    .animated-text.active {
+        opacity: 1;
+    }
+}
