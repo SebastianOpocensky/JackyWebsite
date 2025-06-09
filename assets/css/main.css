@@ -2894,3 +2894,107 @@ input, select, textarea {
         opacity: 1;
     }
 }
+
+
+/* Neue Retreat Sektion */
+.retreat-section {
+    padding: 50px 20px;
+    min-height: 100vh; /* Sektion füllt die Höhe des Bildschirms */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Flexbox für die Anordnung von Text und Bild */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Text-Inhalte (links) */
+.text-content {
+    flex: 1;
+    text-align: left;
+}
+
+/* Bild-Inhalt (rechts) */
+.image-content {
+    flex: 1;
+    text-align: right;
+}
+
+.retreat-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ausgangszustand der Animationen */
+.retreat-heading, .retreat-text, .retreat-button {
+    opacity: 0;
+    transform: translateX(-100px); /* Von links "einfliegen" */
+    transition: all 0.8s ease-out;
+}
+
+.retreat-image {
+    opacity: 0;
+    transform: translateX(100px); /* Von rechts "einfliegen" */
+    transition: all 0.8s ease-out;
+}
+
+/* Zustand, wenn Elemente sichtbar werden */
+.retreat-heading.visible, .retreat-text.visible, .retreat-button.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.retreat-image.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Verzögerungen für eine gestaffelte Animation */
+.retreat-heading {
+    transition-delay: 0.2s;
+}
+
+.retreat-text {
+    transition-delay: 0.4s;
+}
+
+.retreat-button {
+    transition-delay: 0.6s;
+}
+
+/* Responsive Design für kleinere Bildschirme */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column; /* Stapeln: Bild oben, dann Text */
+        text-align: center;
+    }
+    
+    .text-content {
+        text-align: center;
+    }
+    
+    .image-content {
+        text-align: center;
+    }
+    
+    /* Anpassung der Animation für mobile Geräte */
+    .retreat-heading, .retreat-text, .retreat-button {
+        transform: translateX(0); /* Kein horizontaler Shift, da gestapelt */
+        transform: translateY(20px); /* Stattdessen von unten "einfliegen" */
+    }
+    
+    .retreat-image {
+        transform: translateY(20px); /* Bild fliegt auch von unten ein */
+    }
+    
+    .retreat-heading.visible, .retreat-text.visible, .retreat-button.visible, .retreat-image.visible {
+        transform: translateY(0);
+    }
+}

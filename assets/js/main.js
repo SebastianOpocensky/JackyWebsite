@@ -244,7 +244,7 @@
 			});
 
 
-			// Mission Section
+			// Mission Section (Hauptseite)
 			document.addEventListener('DOMContentLoaded', () => {
 				const section = document.querySelector('.mission-section');
 				const image = document.querySelector('.mission-image');
@@ -288,7 +288,7 @@
 				}
 			});
 
-			// About Section
+			// About Section (Hauptseite)
 			document.addEventListener('DOMContentLoaded', () => {
 				const section = document.querySelector('.about-section');
 				const image = document.querySelector('.about-image');
@@ -319,6 +319,29 @@
 					heading.classList.add('active');
 					text.classList.add('active');
 				}
+			});
+
+			// Retreat Sektion (Hauptseite)
+			document.addEventListener('DOMContentLoaded', () => {
+				const section = document.querySelector('.retreat-section');
+				const animatedElements = document.querySelectorAll('.retreat-heading, .retreat-text, .retreat-button, .retreat-image');
+
+				// Funktion, um zu prüfen, ob ein Element im Sichtbereich ist
+				function checkVisibility() {
+					const sectionTop = section.getBoundingClientRect().top;
+					const windowHeight = window.innerHeight;
+
+					// Wenn die Sektion zu 50% im Sichtbereich ist
+					if (sectionTop < windowHeight * 0.5) {
+						animatedElements.forEach(element => {
+							element.classList.add('visible');
+						});
+					}
+				}
+
+				// Prüfe beim Scrollen und initial beim Laden
+				window.addEventListener('scroll', checkVisibility);
+				checkVisibility(); // Prüfe sofort, falls die Sektion schon sichtbar ist
 			});
 
 })(jQuery);
