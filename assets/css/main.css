@@ -2807,7 +2807,7 @@ input, select, textarea {
 /* New About Section */
 
 /* Grundlegende Stile für die Sektion */
-.animated-section {
+.about-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -2824,13 +2824,13 @@ input, select, textarea {
     text-align: left;
 }
 
-.animated-heading {
+.about-heading {
     opacity: 0; /* Start: unsichtbar */
     transform: translateX(-100%); /* Start: links außerhalb des Sichtfelds */
     transition: all 0.8s ease-in-out;
 }
 
-.animated-text {
+.about-text {
     opacity: 0; /* Start: unsichtbar */
     transform: translateX(-100%); /* Start: links außerhalb des Sichtfelds */
     transition: all 0.8s ease-in-out 0.2s; /* Leichte Verzögerung für den Text */
@@ -2842,7 +2842,7 @@ input, select, textarea {
     max-width: 40%;
 }
 
-.animated-image {
+.about-image {
     width: 100%;
     height: auto;
     opacity: 0; /* Start: unsichtbar für Animation */
@@ -2851,20 +2851,20 @@ input, select, textarea {
 }
 
 /* Klasse, die bei Scroll hinzugefügt wird */
-.animated-heading.active,
-.animated-text.active {
+.about-heading.active,
+.about-text.active {
     opacity: 1;
     transform: translateX(0); /* Überschrift und Text fahren von links ein */
 }
 
-.animated-image.active {
+.about-image.active {
     opacity: 1;
     transform: translateX(0); /* Bild fährt von rechts ein */
 }
 
 /* Responsivität für kleinere Bildschirme */
 @media (max-width: 768px) {
-    .animated-section {
+    .about-section {
         flex-direction: column;
         padding: 20px;
     }
@@ -2880,17 +2880,17 @@ input, select, textarea {
         order: -1; /* Bild wird oben angezeigt */
     }
     
-    .animated-heading,
-    .animated-text,
-    .animated-image {
+    .about-heading,
+    .about-text,
+    .about-image {
         transform: translateX(0); /* Keine seitliche Animation auf Mobilgeräten */
         opacity: 0;
         transition: opacity 0.8s ease-in-out;
     }
     
-    .animated-heading.active,
-    .animated-text.active,
-    .animated-image.active {
+    .about-heading.active,
+    .about-text.active,
+    .about-image.active {
         opacity: 1;
     }
 }
