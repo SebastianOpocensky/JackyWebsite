@@ -323,8 +323,8 @@
 
 			// Retreat Sektion (Hauptseite)
 			document.addEventListener('DOMContentLoaded', () => {
-				const section = document.querySelector('.animate-section');
-				const animatedElements = document.querySelectorAll('.animated-heading, .animated-text, .animated-button, .animated-image');
+				const section = document.querySelector('.retreat-section');
+				const animatedElements = document.querySelectorAll('.retreat-heading, .retreat-text, .retreat-button, .retreat-image');
 
 				// Funktion, um zu prüfen, ob ein Element im Sichtbereich ist
 				function checkVisibility() {
