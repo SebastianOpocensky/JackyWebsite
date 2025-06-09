@@ -290,10 +290,10 @@
 
 			// About Section
 			document.addEventListener('DOMContentLoaded', () => {
-				const section = document.querySelector('.animated-section');
-				const image = document.querySelector('.animated-image');
-				const heading = document.querySelector('.animated-heading');
-				const text = document.querySelector('.animated-text');
+				const section = document.querySelector('.about-section');
+				const image = document.querySelector('.about-image');
+				const heading = document.querySelector('.about-heading');
+				const text = document.querySelector('.about-text');
 
 				// Funktion, um zu prüfen, ob ein Element im Sichtfeld ist
 				function isInViewport(element) {
