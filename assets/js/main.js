@@ -27,6 +27,20 @@
             $body.removeClass('is-preload');
         }, 100);
 
+	// Fallback: Remove is-preload after a maximum of 5 seconds
+    setTimeout(function() {
+        if ($body.hasClass('is-preload')) {
+            $body.removeClass('is-preload');
+        }
+    }, 5000);
+
+    // Additional check on scroll to ensure the class is removed
+    $window.on('scroll', function() {
+        if ($body.hasClass('is-preload')) {
+            $body.removeClass('is-preload');
+        }
+    });
+
         // Menu toggle for dropdown
         $('#menuToggle').on('click', function () {
             $('#dropdownMenu').toggleClass('hidden visible');
