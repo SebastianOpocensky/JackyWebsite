@@ -2689,3 +2689,74 @@ input, select, textarea {
     opacity: 1 !important;
   }
 }
+
+/* Packages & Pricing Section */
+.packages-section {
+  padding: 4rem 1rem;
+  background-color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.packages-intro {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  transition: transform 1s ease, opacity 1s ease;
+  opacity: 0;
+  transform: translateY(50px);
+  text-align: justify;
+}
+
+.packages-intro.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.packages-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.packages-image,
+.packages-text {
+  flex: 1 1 400px;
+  max-width: 500px;
+  transition: transform 1s ease, opacity 1s ease;
+  opacity: 0;
+}
+
+.packages-image img {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hidden-left {
+  transform: translateX(-100px);
+}
+
+.hidden-right {
+  transform: translateX(100px);
+}
+
+.hidden-bottom {
+  transform: translateY(50px);
+}
+
+.show {
+  transform: translateX(0) translateY(0);
+  opacity: 1;
+}
+
+/* Deactivate animations on mobile */
+@media (max-width: 768px) {
+  .packages-image,
+  .packages-text,
+  .packages-intro {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}

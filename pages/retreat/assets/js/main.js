@@ -381,5 +381,34 @@
 				handleScrollAnimation(); // Initial aufrufen
 			});
 
+			// Packages & Pricing Section 
+			document.addEventListener("DOMContentLoaded", () => {
+			const elementsToAnimate = document.querySelectorAll(
+				".packages-intro, .packages-image, .packages-text"
+			);
+
+			function isInViewport(el) {
+				const rect = el.getBoundingClientRect();
+				return rect.top < window.innerHeight && rect.bottom >= 0;
+			}
+
+			function animateOnScroll() {
+				if (window.innerWidth > 768) {
+				elementsToAnimate.forEach((el) => {
+					if (isInViewport(el)) {
+					el.classList.add("show");
+					el.classList.remove("hidden-left", "hidden-right", "hidden-bottom");
+					}
+				});
+				} else {
+				// On mobile, show all immediately
+				elementsToAnimate.forEach((el) => el.classList.add("show"));
+				}
+			}
+
+			window.addEventListener("scroll", animateOnScroll);
+			window.addEventListener("resize", animateOnScroll);
+			animateOnScroll(); // Initial call
+			});
 
 })(jQuery);
