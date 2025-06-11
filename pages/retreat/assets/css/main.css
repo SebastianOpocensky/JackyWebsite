@@ -2629,3 +2629,63 @@ input, select, textarea {
         opacity: 1;
     }
 }
+
+
+/* EVERYTHING AT A GLACE Section */
+.glance-section {
+  padding: 4rem 1rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.glance-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.glance-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.glance-box {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  flex: 1 1 400px;
+  max-width: 450px;
+  transition: transform 1s ease, opacity 1s ease;
+  opacity: 0;
+}
+
+.glance-box ul {
+  text-align: left;
+  padding-left: 1rem;
+  list-style: disc;
+}
+
+.glance-box.left.hidden {
+  transform: translateX(-100px);
+}
+
+.glance-box.right.hidden {
+  transform: translateX(100px);
+}
+
+.glance-box.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Deactivate animation on small screens */
+@media (max-width: 768px) {
+  .glance-box {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}

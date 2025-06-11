@@ -346,4 +346,40 @@
 				}
 			});
 
+			// EVERYTHING AT A GLACE Section 
+			document.addEventListener("DOMContentLoaded", () => {
+				const leftBox = document.querySelector('.glance-box.left');
+				const rightBox = document.querySelector('.glance-box.right');
+
+				// Funktion um zu prüfen, ob ein Element im Viewport ist
+				function isInViewport(element) {
+					const rect = element.getBoundingClientRect();
+					return (
+					rect.top < window.innerHeight && rect.bottom >= 0
+					);
+				}
+
+				function handleScrollAnimation() {
+					if (window.innerWidth > 768) {
+					if (isInViewport(leftBox)) {
+						leftBox.classList.add('show');
+						leftBox.classList.remove('hidden');
+					}
+					if (isInViewport(rightBox)) {
+						rightBox.classList.add('show');
+						rightBox.classList.remove('hidden');
+					}
+					} else {
+					// Auf mobilen Geräten direkt anzeigen
+					leftBox.classList.add('show');
+					rightBox.classList.add('show');
+					}
+				}
+
+				window.addEventListener('scroll', handleScrollAnimation);
+				window.addEventListener('resize', handleScrollAnimation);
+				handleScrollAnimation(); // Initial aufrufen
+			});
+
+
 })(jQuery);
