@@ -2259,7 +2259,7 @@ input, select, textarea {
 /* Intro */
 
 	#intro {
-		background: url("images/overlay.png"), url("../../images/intro.jpg");
+		background: url("images/overlay.png"), url("../../images/retreat/img1.png");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
@@ -2325,3 +2325,94 @@ input, select, textarea {
 			}
 
 		}
+
+		/* New About Section */
+
+/* Grundlegende Stile für die Sektion */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    min-height: 80vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Text-Container */
+.text-container {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+}
+
+.about-heading {
+    opacity: 0; /* Start: unsichtbar */
+    transform: translateX(-100%); /* Start: links außerhalb des Sichtfelds */
+    transition: all 0.8s ease-in-out;
+}
+
+.about-text {
+    opacity: 0; /* Start: unsichtbar */
+    transform: translateX(-100%); /* Start: links außerhalb des Sichtfelds */
+    transition: all 0.8s ease-in-out 0.2s; /* Leichte Verzögerung für den Text */
+}
+
+/* Bild-Container */
+.image-container {
+    flex: 1;
+    max-width: 40%;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    opacity: 0; /* Start: unsichtbar für Animation */
+    transform: translateX(100%); /* Start: rechts außerhalb des Sichtfelds */
+    transition: all 0.8s ease-in-out; /* Sanfte Animation */
+}
+
+/* Klasse, die bei Scroll hinzugefügt wird */
+.about-heading.active,
+.about-text.active {
+    opacity: 1;
+    transform: translateX(0); /* Überschrift und Text fahren von links ein */
+}
+
+.about-image.active {
+    opacity: 1;
+    transform: translateX(0); /* Bild fährt von rechts ein */
+}
+
+/* Responsivität für kleinere Bildschirme */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .text-container {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .image-container {
+        max-width: 100%;
+        margin-bottom: 20px;
+        order: -1; /* Bild wird oben angezeigt */
+    }
+    
+    .about-heading,
+    .about-text,
+    .about-image {
+        transform: translateX(0); /* Keine seitliche Animation auf Mobilgeräten */
+        opacity: 0;
+        transition: opacity 0.8s ease-in-out;
+    }
+    
+    .about-heading.active,
+    .about-text.active,
+    .about-image.active {
+        opacity: 1;
+    }
+}

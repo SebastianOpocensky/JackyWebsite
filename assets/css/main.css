@@ -2387,7 +2387,7 @@ input, select, textarea {
 
 /*Retreat Page */
 
-#RetreatIntro {
+#RetreatLanding {
 		background: url("images/overlay.png"), url("../../images/retreat/img1.png");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
@@ -2395,6 +2395,7 @@ input, select, textarea {
 		background-repeat: repeat, no-repeat;
 	}
 
+	
 
 
 
