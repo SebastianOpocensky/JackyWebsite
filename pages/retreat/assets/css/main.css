@@ -108,7 +108,7 @@ input, select, textarea {
 			transition: none !important;
 		}
 
-/* Spinner */
+/* Spinner 
 
 	@-moz-keyframes spinner-rotate {
 		0% {
@@ -174,7 +174,7 @@ input, select, textarea {
 		}
 	}
 
-/* Loader */
+ Loader 
 
 	@-moz-keyframes spinner-show {
 		0% {
@@ -419,6 +419,7 @@ input, select, textarea {
 			z-index: -1;
 		}
 	}
+		*/
 
 	body {
 		text-decoration: none;
@@ -2359,9 +2360,10 @@ input, select, textarea {
 
 		}
 
-		/* New About Section */
+		
 
 /* Grundlegende Stile für die Sektion */
+/*  About Section */
 .about-section {
     display: flex;
     align-items: center;
@@ -2446,6 +2448,184 @@ input, select, textarea {
     .about-heading.active,
     .about-text.active,
     .about-image.active {
+        opacity: 1;
+    }
+}
+
+
+/*  Experience Section */
+.experience-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    min-height: 80vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Text-Container */
+.text-container {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+}
+
+.experience-heading {
+    opacity: 0; /* Start: unsichtbar */
+    transform: translateX(-100%); /* Start: links außerhalb des Sichtfelds */
+    transition: all 0.8s ease-in-out;
+}
+
+.experience-text {
+    opacity: 0; /* Start: unsichtbar */
+    transform: translateX(-100%); /* Start: links außerhalb des Sichtfelds */
+    transition: all 0.8s ease-in-out 0.2s; /* Leichte Verzögerung für den Text */
+}
+
+/* Bild-Container */
+.image-container {
+    flex: 1;
+    max-width: 40%;
+}
+
+.experience-image {
+    width: 100%;
+    height: auto;
+    opacity: 0; /* Start: unsichtbar für Animation */
+    transform: translateX(100%); /* Start: rechts außerhalb des Sichtfelds */
+    transition: all 0.8s ease-in-out; /* Sanfte Animation */
+}
+
+/* Klasse, die bei Scroll hinzugefügt wird */
+.experience-heading.active,
+.experience-text.active {
+    opacity: 1;
+    transform: translateX(0); /* Überschrift und Text fahren von links ein */
+}
+
+.experience-image.active {
+    opacity: 1;
+    transform: translateX(0); /* Bild fährt von rechts ein */
+}
+
+/* Responsivität für kleinere Bildschirme */
+@media (max-width: 768px) {
+    .experience-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .text-container {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .image-container {
+        max-width: 100%;
+        margin-bottom: 20px;
+        order: -1; /* Bild wird oben angezeigt */
+    }
+    
+    .experience-heading,
+    .experience-text,
+    .experience-image {
+        transform: translateX(0); /* Keine seitliche Animation auf Mobilgeräten */
+        opacity: 0;
+        transition: opacity 0.8s ease-in-out;
+    }
+    
+    .experience-heading.active,
+    .experience-text.active,
+    .experience-image.active {
+        opacity: 1;
+    }
+}
+
+
+/* A DAY AT THE VILLA Section */
+
+.day-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    min-height: 80vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Bild-Container */
+.image-container {
+    flex: 1;
+    max-width: 40%;
+}
+
+.day-image {
+    width: 100%;
+    height: auto;
+    opacity: 0; /* Start: unsichtbar für Animation */
+    transform: translateX(-100%); /* Start: links außerhalb des Sichtfelds */
+    transition: all 0.8s ease-in-out; /* Sanfte Animation */
+}
+
+/* Text-Container */
+.text-container {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+}
+
+.day-heading {
+    opacity: 0; /* Start: unsichtbar */
+    transform: translateX(100%); /* Start: rechts außerhalb des Sichtfelds */
+    transition: all 0.8s ease-in-out;
+}
+
+.day-text {
+    opacity: 0; /* Start: unsichtbar */
+    transform: translateX(100%); /* Start: rechts außerhalb des Sichtfelds */
+    transition: all 0.8s ease-in-out 0.2s; /* Leichte Verzögerung für den Text */
+}
+
+/* Klasse, die bei Scroll hinzugefügt wird */
+.day-image.active {
+    opacity: 1;
+    transform: translateX(0); /* Bild fährt von links ein */
+}
+
+.day-heading.active,
+.day-text.active {
+    opacity: 1;
+    transform: translateX(0); /* Überschrift und Text fahren von rechts ein */
+}
+
+/* Responsivität für kleinere Bildschirme */
+@media (max-width: 768px) {
+    .day-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .image-container {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .text-container {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .day-heading,
+    .day-text {
+        transform: translateX(0); /* Keine seitliche Animation auf Mobilgeräten */
+        opacity: 0;
+        transition: opacity 0.8s ease-in-out;
+    }
+    
+    .day-heading.active,
+    .day-text.active {
         opacity: 1;
     }
 }

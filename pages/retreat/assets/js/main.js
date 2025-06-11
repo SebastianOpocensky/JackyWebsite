@@ -269,6 +269,81 @@
 			});
 
 
-			
+			// Experience Section 
+			document.addEventListener('DOMContentLoaded', () => {
+				const section = document.querySelector('.experience-section');
+				const image = document.querySelector('.experience-image');
+				const heading = document.querySelector('.experience-heading');
+				const text = document.querySelector('.experience-text');
+
+				// Funktion, um zu prüfen, ob ein Element im Sichtfeld ist
+				function isInViewport(element) {
+					const rect = element.getBoundingClientRect();
+					return (
+						rect.top >= 0 &&
+						rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8
+					);
+				}
+
+				// Scroll-Event-Listener
+				window.addEventListener('scroll', () => {
+					if (isInViewport(section)) {
+						image.classList.add('active');
+						heading.classList.add('active');
+						text.classList.add('active');
+					}
+				});
+
+				// Initiale Prüfung, falls die Sektion bereits sichtbar ist
+				if (isInViewport(section)) {
+					image.classList.add('active');
+					heading.classList.add('active');
+					text.classList.add('active');
+				}
+			});
+
+			// DAY AT THE VILLA Section 
+			document.addEventListener('DOMContentLoaded', () => {
+				const section = document.querySelector('.day-section');
+				const image = document.querySelector('.day-image');
+				const heading = document.querySelector('.day-heading');
+				const text = document.querySelector('.day-text');
+
+				// Funktion, um zu prüfen, ob ein Element im Sichtfeld ist
+				function isInViewport(element) {
+					const rect = element.getBoundingClientRect();
+					const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+					return (
+						rect.top >= -rect.height && // Sektion nicht komplett oben außerhalb
+						rect.bottom <= windowHeight + rect.height // Sektion nicht komplett unten außerhalb
+					);
+				}
+
+				// Scroll-Event-Listener
+				window.addEventListener('scroll', () => {
+					if (isInViewport(section)) {
+						// Elemente einfahren lassen, wenn im Sichtfeld
+						image.classList.add('active');
+						heading.classList.add('active');
+						text.classList.add('active');
+					} else {
+						// Elemente ausfahren lassen, wenn außerhalb des Sichtfelds
+						image.classList.remove('active');
+						heading.classList.remove('active');
+						text.classList.remove('active');
+					}
+				});
+
+				// Initiale Prüfung, falls die Sektion bereits sichtbar ist
+				if (isInViewport(section)) {
+					image.classList.add('active');
+					heading.classList.add('active');
+					text.classList.add('active');
+				} else {
+					image.classList.remove('active');
+					heading.classList.remove('active');
+					text.classList.remove('active');
+				}
+			});
 
 })(jQuery);
