@@ -2258,12 +2258,45 @@ input, select, textarea {
 
 /* Intro */
 
-	#intro {
+	#landintro {
 		background: url("images/overlay.png"), url("../../images/retreat/img1.png");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
 		background-repeat: repeat, no-repeat;
+	}
+
+	.intro {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 100px 20px;
+	gap: 80px;
+	background-color: #f5f5f5;
+	}
+
+	.intro-text {
+	max-width: 800px;
+	background: white;
+	padding: 40px;
+	border-radius: 12px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	opacity: 0;
+	transform: translateX(0);
+	transition: all 1s ease;
+	}
+
+	.intro-right {
+	transform: translateX(100%);
+	}
+
+	.intro-left {
+	transform: translateX(-100%);
+	}
+
+	.intro-text.visible {
+	opacity: 1;
+	transform: translateX(0);
 	}
 
 /* One */

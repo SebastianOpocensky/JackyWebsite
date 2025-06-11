@@ -249,4 +249,26 @@
 				}
 			});
 
+			//Intro Section
+
+			document.addEventListener("DOMContentLoaded", () => {
+			const introTexts = document.querySelectorAll(".intro-text");
+
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add("visible");
+					observer.unobserve(entry.target); // Nur einmal animieren
+				}
+				});
+			}, {
+				threshold: 0.1
+			});
+
+			introTexts.forEach(text => observer.observe(text));
+			});
+
+
+			
+
 })(jQuery);
