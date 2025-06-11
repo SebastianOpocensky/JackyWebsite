@@ -2760,3 +2760,63 @@ input, select, textarea {
     opacity: 1 !important;
   }
 }
+
+
+/* ABOUT HOSTS SECTION */
+#about-hosts {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.hosts-container,
+.hosts-text-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+  text-align: justify;
+}
+
+.host-image {
+  width: 300px;
+  max-width: 90%;
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 1s ease;
+}
+
+.host-text {
+  max-width: 300px;
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 1s ease;
+}
+
+/* Animationen */
+.from-left.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.from-right.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.from-left {
+  transform: translateX(-100px);
+}
+
+.from-right {
+  transform: translateX(100px);
+}
+
+/* Für Mobilgeräte: Animationen deaktivieren */
+@media (max-width: 768px) {
+  .host-image,
+  .host-text {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}

@@ -411,4 +411,25 @@
 			animateOnScroll(); // Initial call
 			});
 
+
+			// MEET YOUR HOSTS Section 
+			function animateOnScroll() {
+			const animatedElements = document.querySelectorAll('.from-left, .from-right');
+
+			const isMobile = window.innerWidth <= 768;
+
+			if (isMobile) return; // Keine Animation auf Mobilgeräten
+
+			animatedElements.forEach(el => {
+				const rect = el.getBoundingClientRect();
+				if (rect.top < window.innerHeight - 100) {
+				el.classList.add('show');
+				}
+			});
+			}
+
+			window.addEventListener('scroll', animateOnScroll);
+			window.addEventListener('load', animateOnScroll);
+
+
 })(jQuery);
