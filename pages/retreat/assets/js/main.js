@@ -22,37 +22,11 @@
 		});
 
 	// Play initial animations on page load.
-    $window.on('load', function() {
-        setTimeout(function() {
-            $body.removeClass('is-preload');
-        }, 100);
-
-	// Fallback: Remove is-preload after a maximum of 5 seconds
-    setTimeout(function() {
-        if ($body.hasClass('is-preload')) {
-            $body.removeClass('is-preload');
-        }
-    }, 5000);
-
-    // Additional check on scroll to ensure the class is removed
-    $window.on('scroll', function() {
-        if ($body.hasClass('is-preload')) {
-            $body.removeClass('is-preload');
-        }
-    });
-
-        // Menu toggle for dropdown
-        $('#menuToggle').on('click', function () {
-            $('#dropdownMenu').toggleClass('hidden visible');
-        });
-
-        // Close dropdown when clicking outside
-        $(document).on('click', function (event) {
-            if (!$(event.target).closest('#menuToggle, #dropdownMenu').length) {
-                $('#dropdownMenu').removeClass('visible').addClass('hidden');
-            }
-        });
-    });
+		$window.on('load', function() {
+			setTimeout(function() {
+				$body.removeClass('is-preload');
+			}, 100);
+		});
 
 	// Touch mode.
 		if (browser.mobile)
@@ -184,17 +158,6 @@
 							leave:		function() { $(this).addClass('inactive'); }
 						});
 
-					$('.content.box.right')
-						.scrollex({
-							top:        '30vh',
-							bottom:     '30vh',
-							delay:      50,
-							initialize: function() { $(this).removeClass('visible'); },
-							terminate:  function() { $(this).removeClass('visible'); },
-							enter:      function() { $(this).addClass('visible'); },
-							leave:      function() { $(this).removeClass('visible'); }
-						});
-
 			};
 
 			var off = function() {
@@ -212,10 +175,6 @@
 
 				// Contact.
 					$('#contact')
-						.unscrollex();
-
-				// Content box right.
-					$('.content.box.right')
 						.unscrollex();
 
 			};
@@ -257,13 +216,98 @@
 				$window.trigger('resize');
 			});
 
-
-			// Mission Section (Hauptseite)
+			// About Section (Hauptseite)
 			document.addEventListener('DOMContentLoaded', () => {
-				const section = document.querySelector('.mission-section');
-				const image = document.querySelector('.mission-image');
-				const heading = document.querySelector('.mission-heading');
-				const text = document.querySelector('.mission-text');
+				const section = document.querySelector('.about-section');
+				const image = document.querySelector('.about-image');
+				const heading = document.querySelector('.about-heading');
+				const text = document.querySelector('.about-text');
+
+				// Funktion, um zu prüfen, ob ein Element im Sichtfeld ist
+				function isInViewport(element) {
+					const rect = element.getBoundingClientRect();
+					return (
+						rect.top >= 0 &&
+						rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8
+					);
+				}
+
+				// Scroll-Event-Listener
+				window.addEventListener('scroll', () => {
+					if (isInViewport(section)) {
+						image.classList.add('active');
+						heading.classList.add('active');
+						text.classList.add('active');
+					}
+				});
+
+				// Initiale Prüfung, falls die Sektion bereits sichtbar ist
+				if (isInViewport(section)) {
+					image.classList.add('active');
+					heading.classList.add('active');
+					text.classList.add('active');
+				}
+			});
+
+			//Intro Section
+
+			document.addEventListener("DOMContentLoaded", () => {
+			const introTexts = document.querySelectorAll(".intro-text");
+
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add("visible");
+					observer.unobserve(entry.target); // Nur einmal animieren
+				}
+				});
+			}, {
+				threshold: 0.1
+			});
+
+			introTexts.forEach(text => observer.observe(text));
+			});
+
+
+			// Experience Section 
+			document.addEventListener('DOMContentLoaded', () => {
+				const section = document.querySelector('.experience-section');
+				const image = document.querySelector('.experience-image');
+				const heading = document.querySelector('.experience-heading');
+				const text = document.querySelector('.experience-text');
+
+				// Funktion, um zu prüfen, ob ein Element im Sichtfeld ist
+				function isInViewport(element) {
+					const rect = element.getBoundingClientRect();
+					return (
+						rect.top >= 0 &&
+						rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8
+					);
+				}
+
+				// Scroll-Event-Listener
+				window.addEventListener('scroll', () => {
+					if (isInViewport(section)) {
+						image.classList.add('active');
+						heading.classList.add('active');
+						text.classList.add('active');
+					}
+				});
+
+				// Initiale Prüfung, falls die Sektion bereits sichtbar ist
+				if (isInViewport(section)) {
+					image.classList.add('active');
+					heading.classList.add('active');
+					text.classList.add('active');
+				}
+			});
+
+			// DAY AT THE VILLA Section 
+			document.addEventListener('DOMContentLoaded', () => {
+				const section = document.querySelector('.day-section');
+				const image = document.querySelector('.day-image');
+				const heading = document.querySelector('.day-heading');
+				const text = document.querySelector('.day-text');
 
 				// Funktion, um zu prüfen, ob ein Element im Sichtfeld ist
 				function isInViewport(element) {
@@ -302,60 +346,90 @@
 				}
 			});
 
-			// About Section (Hauptseite)
-			document.addEventListener('DOMContentLoaded', () => {
-				const section = document.querySelector('.about-section');
-				const image = document.querySelector('.about-image');
-				const heading = document.querySelector('.about-heading');
-				const text = document.querySelector('.about-text');
+			// EVERYTHING AT A GLACE Section 
+			document.addEventListener("DOMContentLoaded", () => {
+				const leftBox = document.querySelector('.glance-box.left');
+				const rightBox = document.querySelector('.glance-box.right');
 
-				// Funktion, um zu prüfen, ob ein Element im Sichtfeld ist
+				// Funktion um zu prüfen, ob ein Element im Viewport ist
 				function isInViewport(element) {
 					const rect = element.getBoundingClientRect();
 					return (
-						rect.top >= 0 &&
-						rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8
+					rect.top < window.innerHeight && rect.bottom >= 0
 					);
 				}
 
-				// Scroll-Event-Listener
-				window.addEventListener('scroll', () => {
-					if (isInViewport(section)) {
-						image.classList.add('active');
-						heading.classList.add('active');
-						text.classList.add('active');
+				function handleScrollAnimation() {
+					if (window.innerWidth > 768) {
+					if (isInViewport(leftBox)) {
+						leftBox.classList.add('show');
+						leftBox.classList.remove('hidden');
+					}
+					if (isInViewport(rightBox)) {
+						rightBox.classList.add('show');
+						rightBox.classList.remove('hidden');
+					}
+					} else {
+					// Auf mobilen Geräten direkt anzeigen
+					leftBox.classList.add('show');
+					rightBox.classList.add('show');
+					}
+				}
+
+				window.addEventListener('scroll', handleScrollAnimation);
+				window.addEventListener('resize', handleScrollAnimation);
+				handleScrollAnimation(); // Initial aufrufen
+			});
+
+			// Packages & Pricing Section 
+			document.addEventListener("DOMContentLoaded", () => {
+			const elementsToAnimate = document.querySelectorAll(
+				".packages-intro, .packages-image, .packages-text"
+			);
+
+			function isInViewport(el) {
+				const rect = el.getBoundingClientRect();
+				return rect.top < window.innerHeight && rect.bottom >= 0;
+			}
+
+			function animateOnScroll() {
+				if (window.innerWidth > 768) {
+				elementsToAnimate.forEach((el) => {
+					if (isInViewport(el)) {
+					el.classList.add("show");
+					el.classList.remove("hidden-left", "hidden-right", "hidden-bottom");
 					}
 				});
-
-				// Initiale Prüfung, falls die Sektion bereits sichtbar ist
-				if (isInViewport(section)) {
-					image.classList.add('active');
-					heading.classList.add('active');
-					text.classList.add('active');
+				} else {
+				// On mobile, show all immediately
+				elementsToAnimate.forEach((el) => el.classList.add("show"));
 				}
+			}
+
+			window.addEventListener("scroll", animateOnScroll);
+			window.addEventListener("resize", animateOnScroll);
+			animateOnScroll(); // Initial call
 			});
 
-			// Retreat Sektion (Hauptseite)
-			document.addEventListener('DOMContentLoaded', () => {
-				const section = document.querySelector('.retreat-section');
-				const animatedElements = document.querySelectorAll('.retreat-heading, .retreat-text, .retreat-button, .retreat-image');
 
-				// Funktion, um zu prüfen, ob ein Element im Sichtbereich ist
-				function checkVisibility() {
-					const sectionTop = section.getBoundingClientRect().top;
-					const windowHeight = window.innerHeight;
+			// MEET YOUR HOSTS Section 
+			function animateOnScroll() {
+			const animatedElements = document.querySelectorAll('.from-left, .from-right');
 
-					// Wenn die Sektion zu 50% im Sichtbereich ist
-					if (sectionTop < windowHeight * 0.5) {
-						animatedElements.forEach(element => {
-							element.classList.add('visible');
-						});
-					}
+			const isMobile = window.innerWidth <= 768;
+
+			if (isMobile) return; // Keine Animation auf Mobilgeräten
+
+			animatedElements.forEach(el => {
+				const rect = el.getBoundingClientRect();
+				if (rect.top < window.innerHeight - 100) {
+				el.classList.add('show');
 				}
-
-				// Prüfe beim Scrollen und initial beim Laden
-				window.addEventListener('scroll', checkVisibility);
-				checkVisibility(); // Prüfe sofort, falls die Sektion schon sichtbar ist
 			});
+			}
+
+			window.addEventListener('scroll', animateOnScroll);
+			window.addEventListener('load', animateOnScroll);
+
 
 })(jQuery);

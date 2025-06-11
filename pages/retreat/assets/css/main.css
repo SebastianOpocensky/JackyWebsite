@@ -108,7 +108,7 @@ input, select, textarea {
 			transition: none !important;
 		}
 
-/* Spinner */
+/* Spinner 
 
 	@-moz-keyframes spinner-rotate {
 		0% {
@@ -174,7 +174,7 @@ input, select, textarea {
 		}
 	}
 
-/* Loader */
+ Loader 
 
 	@-moz-keyframes spinner-show {
 		0% {
@@ -419,6 +419,7 @@ input, select, textarea {
 			z-index: -1;
 		}
 	}
+		*/
 
 	body {
 		text-decoration: none;
@@ -2258,12 +2259,45 @@ input, select, textarea {
 
 /* Intro */
 
-	#intro {
-		background: url("images/overlay.png"), url("../../images/intro.jpg");
+	#landintro {
+		background: url("images/overlay.png"), url("../../images/retreat/img1.png");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
 		background-repeat: repeat, no-repeat;
+	}
+
+	.intro {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 100px 20px;
+	gap: 80px;
+	background-color: #f5f5f5;
+	}
+
+	.intro-text {
+	max-width: 800px;
+	background: white;
+	padding: 40px;
+	border-radius: 12px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	opacity: 0;
+	transform: translateX(0);
+	transition: all 1s ease;
+	}
+
+	.intro-right {
+	transform: translateX(100%);
+	}
+
+	.intro-left {
+	transform: translateX(-100%);
+	}
+
+	.intro-text.visible {
+	opacity: 1;
+	transform: translateX(0);
 	}
 
 /* One */
@@ -2325,3 +2359,464 @@ input, select, textarea {
 			}
 
 		}
+
+		
+
+/* Grundlegende Stile für die Sektion */
+/*  About Section */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    min-height: 80vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Text-Container */
+.text-container {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+}
+
+.about-heading {
+    opacity: 0; /* Start: unsichtbar */
+    transform: translateX(-100%); /* Start: links außerhalb des Sichtfelds */
+    transition: all 0.8s ease-in-out;
+}
+
+.about-text {
+    opacity: 0; /* Start: unsichtbar */
+    transform: translateX(-100%); /* Start: links außerhalb des Sichtfelds */
+    transition: all 0.8s ease-in-out 0.2s; /* Leichte Verzögerung für den Text */
+}
+
+/* Bild-Container */
+.image-container {
+    flex: 1;
+    max-width: 40%;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    opacity: 0; /* Start: unsichtbar für Animation */
+    transform: translateX(100%); /* Start: rechts außerhalb des Sichtfelds */
+    transition: all 0.8s ease-in-out; /* Sanfte Animation */
+}
+
+/* Klasse, die bei Scroll hinzugefügt wird */
+.about-heading.active,
+.about-text.active {
+    opacity: 1;
+    transform: translateX(0); /* Überschrift und Text fahren von links ein */
+}
+
+.about-image.active {
+    opacity: 1;
+    transform: translateX(0); /* Bild fährt von rechts ein */
+}
+
+/* Responsivität für kleinere Bildschirme */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .text-container {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .image-container {
+        max-width: 100%;
+        margin-bottom: 20px;
+        order: -1; /* Bild wird oben angezeigt */
+    }
+    
+    .about-heading,
+    .about-text,
+    .about-image {
+        transform: translateX(0); /* Keine seitliche Animation auf Mobilgeräten */
+        opacity: 0;
+        transition: opacity 0.8s ease-in-out;
+    }
+    
+    .about-heading.active,
+    .about-text.active,
+    .about-image.active {
+        opacity: 1;
+    }
+}
+
+
+/*  Experience Section */
+.experience-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    min-height: 80vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Text-Container */
+.text-container {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+}
+
+.experience-heading {
+    opacity: 0; /* Start: unsichtbar */
+    transform: translateX(-100%); /* Start: links außerhalb des Sichtfelds */
+    transition: all 0.8s ease-in-out;
+}
+
+.experience-text {
+    opacity: 0; /* Start: unsichtbar */
+    transform: translateX(-100%); /* Start: links außerhalb des Sichtfelds */
+    transition: all 0.8s ease-in-out 0.2s; /* Leichte Verzögerung für den Text */
+}
+
+/* Bild-Container */
+.image-container {
+    flex: 1;
+    max-width: 40%;
+}
+
+.experience-image {
+    width: 100%;
+    height: auto;
+    opacity: 0; /* Start: unsichtbar für Animation */
+    transform: translateX(100%); /* Start: rechts außerhalb des Sichtfelds */
+    transition: all 0.8s ease-in-out; /* Sanfte Animation */
+}
+
+/* Klasse, die bei Scroll hinzugefügt wird */
+.experience-heading.active,
+.experience-text.active {
+    opacity: 1;
+    transform: translateX(0); /* Überschrift und Text fahren von links ein */
+}
+
+.experience-image.active {
+    opacity: 1;
+    transform: translateX(0); /* Bild fährt von rechts ein */
+}
+
+/* Responsivität für kleinere Bildschirme */
+@media (max-width: 768px) {
+    .experience-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .text-container {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .image-container {
+        max-width: 100%;
+        margin-bottom: 20px;
+        order: -1; /* Bild wird oben angezeigt */
+    }
+    
+    .experience-heading,
+    .experience-text,
+    .experience-image {
+        transform: translateX(0); /* Keine seitliche Animation auf Mobilgeräten */
+        opacity: 0;
+        transition: opacity 0.8s ease-in-out;
+    }
+    
+    .experience-heading.active,
+    .experience-text.active,
+    .experience-image.active {
+        opacity: 1;
+    }
+}
+
+
+/* A DAY AT THE VILLA Section */
+
+.day-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    min-height: 80vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Bild-Container */
+.image-container {
+    flex: 1;
+    max-width: 40%;
+}
+
+.day-image {
+    width: 100%;
+    height: auto;
+    opacity: 0; /* Start: unsichtbar für Animation */
+    transform: translateX(-100%); /* Start: links außerhalb des Sichtfelds */
+    transition: all 0.8s ease-in-out; /* Sanfte Animation */
+}
+
+/* Text-Container */
+.text-container {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+}
+
+.day-heading {
+    opacity: 0; /* Start: unsichtbar */
+    transform: translateX(100%); /* Start: rechts außerhalb des Sichtfelds */
+    transition: all 0.8s ease-in-out;
+}
+
+.day-text {
+    opacity: 0; /* Start: unsichtbar */
+    transform: translateX(100%); /* Start: rechts außerhalb des Sichtfelds */
+    transition: all 0.8s ease-in-out 0.2s; /* Leichte Verzögerung für den Text */
+}
+
+/* Klasse, die bei Scroll hinzugefügt wird */
+.day-image.active {
+    opacity: 1;
+    transform: translateX(0); /* Bild fährt von links ein */
+}
+
+.day-heading.active,
+.day-text.active {
+    opacity: 1;
+    transform: translateX(0); /* Überschrift und Text fahren von rechts ein */
+}
+
+/* Responsivität für kleinere Bildschirme */
+@media (max-width: 768px) {
+    .day-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .image-container {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .text-container {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .day-heading,
+    .day-text {
+        transform: translateX(0); /* Keine seitliche Animation auf Mobilgeräten */
+        opacity: 0;
+        transition: opacity 0.8s ease-in-out;
+    }
+    
+    .day-heading.active,
+    .day-text.active {
+        opacity: 1;
+    }
+}
+
+
+/* EVERYTHING AT A GLACE Section */
+.glance-section {
+  padding: 4rem 1rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.glance-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.glance-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.glance-box {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  flex: 1 1 400px;
+  max-width: 450px;
+  transition: transform 1s ease, opacity 1s ease;
+  opacity: 0;
+}
+
+.glance-box ul {
+  text-align: left;
+  padding-left: 1rem;
+  list-style: disc;
+}
+
+.glance-box.left.hidden {
+  transform: translateX(-100px);
+}
+
+.glance-box.right.hidden {
+  transform: translateX(100px);
+}
+
+.glance-box.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Deactivate animation on small screens */
+@media (max-width: 768px) {
+  .glance-box {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* Packages & Pricing Section */
+.packages-section {
+  padding: 4rem 1rem;
+  background-color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.packages-intro {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  transition: transform 1s ease, opacity 1s ease;
+  opacity: 0;
+  transform: translateY(50px);
+  text-align: justify;
+}
+
+.packages-intro.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.packages-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.packages-image,
+.packages-text {
+  flex: 1 1 400px;
+  max-width: 500px;
+  transition: transform 1s ease, opacity 1s ease;
+  opacity: 0;
+}
+
+.packages-image img {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hidden-left {
+  transform: translateX(-100px);
+}
+
+.hidden-right {
+  transform: translateX(100px);
+}
+
+.hidden-bottom {
+  transform: translateY(50px);
+}
+
+.show {
+  transform: translateX(0) translateY(0);
+  opacity: 1;
+}
+
+/* Deactivate animations on mobile */
+@media (max-width: 768px) {
+  .packages-image,
+  .packages-text,
+  .packages-intro {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+
+/* ABOUT HOSTS SECTION */
+#about-hosts {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.hosts-container,
+.hosts-text-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+  text-align: justify;
+}
+
+.host-image {
+  width: 300px;
+  max-width: 90%;
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 1s ease;
+}
+
+.host-text {
+  max-width: 300px;
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 1s ease;
+}
+
+/* Animationen */
+.from-left.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.from-right.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.from-left {
+  transform: translateX(-100px);
+}
+
+.from-right {
+  transform: translateX(100px);
+}
+
+/* Für Mobilgeräte: Animationen deaktivieren */
+@media (max-width: 768px) {
+  .host-image,
+  .host-text {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}

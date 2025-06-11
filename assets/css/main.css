@@ -107,7 +107,7 @@ input, select, textarea {
 			transition: none !important;
 		}
 
-/* Spinner */
+/* Spinner 
 
 	@-moz-keyframes spinner-rotate {
 		0% {
@@ -173,7 +173,7 @@ input, select, textarea {
 		}
 	}
 
-/* Loader */
+ Loader 
 
 	@-moz-keyframes spinner-show {
 		0% {
@@ -418,6 +418,7 @@ input, select, textarea {
 			z-index: -1;
 		}
 	}
+		*/
 
 	body {
 		text-decoration: none;
@@ -2383,6 +2384,22 @@ input, select, textarea {
 
 		}
 
+
+/*Retreat Page */
+
+#RetreatLanding {
+		background: url("images/overlay.png"), url("../../images/retreat/img1.png");
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, bottom center;
+		background-repeat: repeat, no-repeat;
+	}
+
+	
+
+
+
+/*Main Page (index.html) */
 /* Intro */
 
 	#intro {
