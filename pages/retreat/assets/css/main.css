@@ -2300,6 +2300,24 @@ input, select, textarea {
 	transform: translateX(0);
 	}
 
+	/* Deaktiviere Animationen auf Mobilgeräten (z. B. Bildschirme kleiner als 768px) */
+	@media only screen and (max-width: 767px) {
+		.intro-text {
+			opacity: 1; /* Element direkt sichtbar */
+			transform: translateX(0); /* Keine Transformation */
+			transition: none; /* Animation deaktivieren */
+		}
+
+		.intro-right,
+		.intro-left {
+			transform: translateX(0); /* Transformation aufheben */
+		}
+
+		.intro-text.visible {
+			transition: none; /* Animation deaktivieren */
+		}
+	}
+
 /* One */
 
 	#one {
