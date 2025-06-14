@@ -2440,7 +2440,7 @@ input, select, textarea {
 		}
 
 
-/* Mobil-Optimierung */
+/* Logo Navbar & Mobil-Optimierung */
 @media (max-width: 768px) {
   .content-container {
     flex-direction: column;
