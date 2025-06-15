@@ -432,4 +432,24 @@
 			window.addEventListener('load', animateOnScroll);
 
 
+
+			//Slider
+
+			document.querySelectorAll('.packages-image.slider').forEach(slider => {
+				const slides = slider.querySelector('.slides');
+				const imgs = slides.querySelectorAll('img');
+				let index = 0;
+
+				slider.querySelector('.prev').addEventListener('click', () => {
+					index = (index > 0) ? index - 1 : imgs.length - 1;
+					slides.style.transform = `translateX(-${index * 100}%)`;
+				});
+
+				slider.querySelector('.next').addEventListener('click', () => {
+					index = (index < imgs.length - 1) ? index + 1 : 0;
+					slides.style.transform = `translateX(-${index * 100}%)`;
+				});
+			});
+
+
 })(jQuery);

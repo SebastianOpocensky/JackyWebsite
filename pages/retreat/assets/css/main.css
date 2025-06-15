@@ -2864,7 +2864,7 @@ input, select, textarea {
   height: auto;
   object-fit: cover;
   border-radius: 1rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(224, 34, 34, 0.1);
 }
 
 .hidden-left {
@@ -2892,6 +2892,55 @@ input, select, textarea {
     transform: none !important;
     opacity: 1 !important;
   }
+}
+
+/* Slider */
+.packages-image.slider {
+  position: relative;
+  overflow: hidden;
+  max-width: 500px;
+  width: 100%;
+  height: 300px; /* Wichtig */
+  border-radius: 1rem;
+}
+
+.packages-image.slider .slides {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%; /* Wichtig */
+  width: 100%; /* z. B. bei 3 Bildern */
+}
+
+.packages-image.slider .slides img {
+  flex-shrink: 0;
+  flex-basis: 100%;
+  width: 100%;
+  height: 100%; /* Wichtig */
+  object-fit: cover; /* oder cover */
+  border-radius: 0;
+  background-color: #fff;
+}
+
+.packages-image.slider button.prev,
+.packages-image.slider button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.7);
+  border: none;
+  font-size: 2rem;
+  padding: 0 0.5rem;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 50%;
+}
+
+.packages-image.slider button.prev {
+  left: 10px;
+}
+
+.packages-image.slider button.next {
+  right: 10px;
 }
 
 
