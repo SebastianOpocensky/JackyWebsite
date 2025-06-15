@@ -2835,12 +2835,20 @@ input, select, textarea {
 }
 
 .packages-content {
+  max-width: 100%;
+  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
+
+.packages-image {
+  max-width: 500px;
+  width: 100%;
+}
+
 
 .packages-image,
 .packages-text {
@@ -2852,6 +2860,9 @@ input, select, textarea {
 
 .packages-image img {
   width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
