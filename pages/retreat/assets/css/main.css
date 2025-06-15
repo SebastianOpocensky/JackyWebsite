@@ -689,7 +689,7 @@ input, select, textarea {
 			line-height: 4.5em;
 			border-radius: 50%;
 			padding: 0;
-			background-image: url("images/rightarrow2.svg");
+			background-image: url("../../images/buttons/arrow-right-black.svg");
 			background-position: center center;
 			background-repeat: no-repeat;
 			text-indent: -10em;
@@ -716,7 +716,7 @@ input, select, textarea {
 			height: 5em;
 			line-height: 4.5em;
 			padding: 0;
-			background-image: url("images/dark-arrow.svg");
+			background-image: url("/images/dark-arrow.svg");
 			background-position: center center;
 			background-repeat: no-repeat;
 			text-indent: -10em;
@@ -747,8 +747,8 @@ input, select, textarea {
 		input[type="button"]:hover,
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
-		.button:hover,
-		button:hover {
+		.button.right:hover,				/*colour change button when hover*/
+		button.right:hover {
 			background-color: #fc9e7b;
 		}
 
@@ -791,7 +791,7 @@ input, select, textarea {
 			input[type="reset"].style2.down,
 			.button.style2.down,
 			button.style2.down {
-				background-image: url("images/arrow.svg");
+				background-image: url("/pages/retreat/images/buttons/arrow-right-black.svg");
 			}
 
 			input[type="button"].style2.right,
@@ -799,7 +799,7 @@ input, select, textarea {
 			input[type="reset"].style2.right,
 			.button.style2.right,
 			button.style2.right {
-				background-image: url("images/right-arrow.svg");
+				background-image: url("/pages/retreat/images/buttons/arrow-right-black.svg");
 			}
 
 
@@ -826,6 +826,30 @@ input, select, textarea {
 			#menuToggle img {
 				display: block;
 			}
+
+			/* New-Button implementation */
+			.button.icon-button {
+			background-color: #d5d6fe;
+			border-radius: 50%;
+			width: 5em;
+			height: 5em;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0;
+			}
+
+			.button.icon-button svg {
+			width: 24px;
+			height: 24px;
+			color: #ffffff;
+			transition: transform 0.3s ease;
+			}
+
+			.button.icon-button:hover svg {
+			transform: translateX(4px);
+			}
+
 
 /* Form */
 
@@ -2811,12 +2835,20 @@ input, select, textarea {
 }
 
 .packages-content {
+  max-width: 100%;
+  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
+
+.packages-image {
+  max-width: 500px;
+  width: 100%;
+}
+
 
 .packages-image,
 .packages-text {
@@ -2828,8 +2860,11 @@ input, select, textarea {
 
 .packages-image img {
   width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
   border-radius: 1rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(224, 34, 34, 0.1);
 }
 
 .hidden-left {
@@ -2857,6 +2892,75 @@ input, select, textarea {
     transform: none !important;
     opacity: 1 !important;
   }
+}
+
+/* Slider */
+.packages-image.slider {
+  position: relative;
+  overflow: hidden;
+  max-width: 500px;
+  width: 100%;
+  height: 300px; /* Wichtig */
+  border-radius: 1rem;
+}
+
+.packages-image.slider .slides {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%; /* Wichtig */
+  width: 100%; /* z. B. bei 3 Bildern */
+}
+
+.packages-image.slider .slides img {
+  flex-shrink: 0;
+  flex-basis: 100%;
+  width: 100%;
+  height: 100%; /* Wichtig */
+  object-fit: cover; /* oder cover */
+  border-radius: 0;
+  background-color: #fff;
+}
+
+.packages-image.slider button.prev,
+.packages-image.slider button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.7);
+  border: none;
+  font-size: 2rem;
+  padding: 0 0.5rem;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 50%;
+}
+
+.packages-image.slider button.prev,
+.packages-image.slider button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: #d5d6fe;
+  cursor: pointer;
+  user-select: none;
+  padding: 0;
+  z-index: 10;
+}
+
+.packages-image.slider button.prev {
+  left: 15px;
+}
+
+.packages-image.slider button.next {
+  right: 15px;
+}
+
+.packages-image.slider button.prev:hover,
+.packages-image.slider button.next:hover {
+  color: #fc9e7b;
 }
 
 
@@ -2962,4 +3066,16 @@ input, select, textarea {
 
 .hero p {
   font-size: 1.2rem;
+}
+
+.justify-content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.button-with-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 1em;
 }
