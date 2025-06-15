@@ -689,7 +689,7 @@ input, select, textarea {
 			line-height: 4.5em;
 			border-radius: 50%;
 			padding: 0;
-			background-image: url("images/rightarrow2.svg");
+			background-image: url("../../images/buttons/arrow-right-black.svg");
 			background-position: center center;
 			background-repeat: no-repeat;
 			text-indent: -10em;
@@ -791,7 +791,7 @@ input, select, textarea {
 			input[type="reset"].style2.down,
 			.button.style2.down,
 			button.style2.down {
-				background-image: url("/pages/retreat/images/buttons/arrow.svg");
+				background-image: url("/pages/retreat/images/buttons/arrow-right-black.svg");
 			}
 
 			input[type="button"].style2.right,
@@ -799,7 +799,7 @@ input, select, textarea {
 			input[type="reset"].style2.right,
 			.button.style2.right,
 			button.style2.right {
-				background-image: url("/pages/retreat/images/buttons/rightarrow.svg");
+				background-image: url("/pages/retreat/images/buttons/arrow-right-black.svg");
 			}
 
 
