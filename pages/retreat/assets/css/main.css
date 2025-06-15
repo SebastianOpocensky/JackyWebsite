@@ -716,7 +716,7 @@ input, select, textarea {
 			height: 5em;
 			line-height: 4.5em;
 			padding: 0;
-			background-image: url("images/dark-arrow.svg");
+			background-image: url("/images/dark-arrow.svg");
 			background-position: center center;
 			background-repeat: no-repeat;
 			text-indent: -10em;
@@ -747,8 +747,8 @@ input, select, textarea {
 		input[type="button"]:hover,
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
-		.button:hover,
-		button:hover {
+		.button.right:hover,				/*colour change button when hover*/
+		button.right:hover {
 			background-color: #fc9e7b;
 		}
 
@@ -791,7 +791,7 @@ input, select, textarea {
 			input[type="reset"].style2.down,
 			.button.style2.down,
 			button.style2.down {
-				background-image: url("images/arrow.svg");
+				background-image: url("/pages/retreat/images/buttons/arrow.svg");
 			}
 
 			input[type="button"].style2.right,
@@ -799,7 +799,7 @@ input, select, textarea {
 			input[type="reset"].style2.right,
 			.button.style2.right,
 			button.style2.right {
-				background-image: url("images/right-arrow.svg");
+				background-image: url("/pages/retreat/images/buttons/rightarrow.svg");
 			}
 
 
@@ -826,6 +826,30 @@ input, select, textarea {
 			#menuToggle img {
 				display: block;
 			}
+
+			/* New-Button implementation */
+			.button.icon-button {
+			background-color: #d5d6fe;
+			border-radius: 50%;
+			width: 5em;
+			height: 5em;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0;
+			}
+
+			.button.icon-button svg {
+			width: 24px;
+			height: 24px;
+			color: #ffffff;
+			transition: transform 0.3s ease;
+			}
+
+			.button.icon-button:hover svg {
+			transform: translateX(4px);
+			}
+
 
 /* Form */
 
