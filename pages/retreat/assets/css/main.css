@@ -2987,3 +2987,15 @@ input, select, textarea {
 .hero p {
   font-size: 1.2rem;
 }
+
+.justify-content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.button-with-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 1em;
+}
