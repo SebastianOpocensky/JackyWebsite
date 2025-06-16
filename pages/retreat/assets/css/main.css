@@ -2856,6 +2856,7 @@ input, select, textarea {
   max-width: 500px;
   transition: transform 1s ease, opacity 1s ease;
   opacity: 0;
+  text-align: justify;
 }
 
 .packages-image img {
