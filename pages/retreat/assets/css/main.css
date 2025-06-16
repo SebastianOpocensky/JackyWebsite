@@ -2352,7 +2352,7 @@ input, select, textarea {
 }
 
 /* Container, der nur den sichtbaren Bereich zeigt */
-.slider-container {
+.slider1-container {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -2363,7 +2363,7 @@ input, select, textarea {
 }
 
 /* Die Slider-Leiste (Track) mit allen Bildern nebeneinander */
-.slider {
+.slider1 {
   display: flex;
   width: 300%; /* Bei 3 Bildern */
   height: 100%;
@@ -2371,7 +2371,7 @@ input, select, textarea {
 }
 
 /* Einzelne Slides */
-.slider img {
+.slider1 img {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
@@ -2982,6 +2982,7 @@ input, select, textarea {
   transition: transform 0.5s ease;
   height: 100%; /* Wichtig */
   width: 100%; /* z. B. bei 3 Bildern */
+  transform: none;
 }
 
 .packages-image.slider .slides img {

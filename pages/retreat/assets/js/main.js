@@ -381,6 +381,7 @@
 				handleScrollAnimation(); // Initial aufrufen
 			});
 
+	
 			// Packages & Pricing Section 
 			document.addEventListener("DOMContentLoaded", () => {
 			const elementsToAnimate = document.querySelectorAll(
@@ -393,22 +394,37 @@
 			}
 
 			function animateOnScroll() {
-				if (window.innerWidth > 768) {
-				elementsToAnimate.forEach((el) => {
-					if (isInViewport(el)) {
-					el.classList.add("show");
-					el.classList.remove("hidden-left", "hidden-right", "hidden-bottom");
-					}
-				});
-				} else {
-				// On mobile, show all immediately
-				elementsToAnimate.forEach((el) => el.classList.add("show"));
+			if (window.innerWidth > 768) {
+			elementsToAnimate.forEach((el) => {
+				if (isInViewport(el) && !el.classList.contains("show")) {
+				el.classList.add("show");
+				el.classList.remove("hidden-left", "hidden-right", "hidden-bottom");
 				}
+			});
+			} else {
+			elementsToAnimate.forEach((el) => {
+				if (!el.classList.contains("show")) {
+				el.classList.add("show");
+				el.classList.remove("hidden-left", "hidden-right", "hidden-bottom");
+				}
+			});
 			}
+		}
 
-			window.addEventListener("scroll", animateOnScroll);
-			window.addEventListener("resize", animateOnScroll);
-			animateOnScroll(); // Initial call
+		// Debounce function to limit event frequency
+		function debounce(func, wait) {
+			let timeout;
+			return function () {
+			clearTimeout(timeout);
+			timeout = setTimeout(func, wait);
+			};
+		}
+
+		const debouncedAnimateOnScroll = debounce(animateOnScroll, 100);
+
+		window.addEventListener("scroll", debouncedAnimateOnScroll);
+		window.addEventListener("resize", debouncedAnimateOnScroll);
+		animateOnScroll(); // Initial call
 			});
 
 
