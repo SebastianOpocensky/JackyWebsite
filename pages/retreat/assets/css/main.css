@@ -2978,18 +2978,21 @@ input, select, textarea {
 
 
 /* ABOUT HOSTS SECTION */
+/* ABOUT HOSTS SECTION */
 #about-hosts {
   text-align: center;
   padding: 4rem 1rem;
 }
 
-.hosts-container,
-.hosts-text-container {
+/* HOST WRAPPER */
+.host {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: flex-start;
   gap: 2rem;
-  flex-wrap: wrap;
   margin: 2rem 0;
+  flex-wrap: wrap;
   text-align: justify;
 }
 
@@ -3027,8 +3030,13 @@ input, select, textarea {
   transform: translateX(100px);
 }
 
-/* Für Mobilgeräte: Animationen deaktivieren */
+/* MOBIL: Übereinander */
 @media (max-width: 768px) {
+  .host {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .host-image,
   .host-text {
     transform: none !important;
@@ -3037,6 +3045,34 @@ input, select, textarea {
 }
 
 
+
+/* HOST WRAPPER */
+.host {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+  text-align: justify;
+}
+
+/* MOBIL: Übereinander statt nebeneinander */
+@media (max-width: 768px) {
+  .host {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .host-image,
+  .host-text {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* Headerbild - vor Packages */
 .hero {
   background-image: url('../../../../images/SriLanka_SunSet'); /* Pfad anpassen */
   background-size: cover;
