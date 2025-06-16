@@ -2121,7 +2121,22 @@ input, select, textarea {
 				background: #f5f6f7;
 			}
 
+		.main.styleOffer {
+			text-align: center;
+			padding: 6em 0 6em 0;
+		}
 
+			.main.styleOffer .content > header {
+				margin-bottom: 2em;
+			}
+
+			.main.styleOffer.primary {
+				background: #d5d6fe;			/* OFFERS COLOUR */
+			}
+
+			.main.styleOffer.secondary {
+				background: #f5f6f7;
+			}
 
 		.main.style4 {
 				text-align: left;
