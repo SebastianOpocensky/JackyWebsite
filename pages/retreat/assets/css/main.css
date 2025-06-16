@@ -2892,6 +2892,18 @@ input, select, textarea {
     transform: none !important;
     opacity: 1 !important;
   }
+
+  .packages-content {
+    flex-direction: column;
+  }
+
+  .packages-image {
+    order: 1;
+  }
+
+  .packages-text {
+    order: 2;
+  }
 }
 
 /* Slider */
