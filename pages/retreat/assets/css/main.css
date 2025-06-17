@@ -2404,7 +2404,7 @@ input, select, textarea {
 /*Text below Slider and Intro*/
 
 #landintrobelow {
-		background: url("images/overlay.png"), url("../../images/retreat/img1.png");
+		
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
@@ -2417,7 +2417,7 @@ input, select, textarea {
 	align-items: center;
 	padding: 100px 20px;
 	gap: 80px;
-	background-color: #f5f5f5;
+	background-color: #ebe2d7;
 	}
 
 	.intro-text {
