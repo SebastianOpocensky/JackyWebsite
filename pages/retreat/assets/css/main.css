@@ -2552,8 +2552,9 @@ input, select, textarea {
     justify-content: space-between;
     padding: 50px;
     min-height: 80vh;
-    max-width: 1200px;
-    margin: 0 auto;
+    
+    
+	background-color: #9ac8e9;
 }
 
 /* Text-Container */
