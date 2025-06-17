@@ -2486,6 +2486,7 @@ input, select, textarea {
 	#contact {
 		overflow: hidden;
 		padding-bottom: 0;
+		background-color: #ebe2d7;
 	}
 
 		#contact .box {
@@ -2812,10 +2813,10 @@ input, select, textarea {
 }
 
 
-/* EVERYTHING AT A GLACE Section */
+/* EVERYTHING AT A GLANCE Section */
 .glance-section {
   padding: 4rem 1rem;
-  background-color: #f9f9f9;
+  background-color: #7b8469;
   text-align: center;
 }
 
@@ -2874,7 +2875,7 @@ input, select, textarea {
 /* Packages & Pricing Section */
 .packages-section {
   padding: 4rem 1rem;
-  background-color: #fff;
+  background-color: #ebe2d7;
   text-align: center;
   overflow: hidden;
 }
@@ -3041,7 +3042,7 @@ input, select, textarea {
 /* ABOUT HOSTS SECTION */
 #about-hosts {
   text-align: center;
-  padding: 4rem 1rem;
+  background-color: #bbc4aa;
 }
 
 /* HOST WRAPPER */
@@ -3050,10 +3051,10 @@ input, select, textarea {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  gap: 2rem;
-  margin: 2rem 0;
+  
   flex-wrap: wrap;
   text-align: justify;
+  background-color: #bbc4aa;
 }
 
 .host-image {
@@ -3134,14 +3135,11 @@ input, select, textarea {
 
 /* Headerbild - vor Packages */
 .hero {
-  background-image: url('../../../../images/SriLanka_SunSet'); /* Pfad anpassen */
+  background-image: url('../../images/Gallery/ChoosePackageCut.JPG'); /* Pfad anpassen */
   background-size: cover;
   background-position: center;
   height: 60vh;
-  max-width: 1200px; /* Begrenzung der Breite */
-  margin: 0 auto; /* Zentriert die Section */
-  border-radius: 12px; /* optional, für abgerundete Ecken */
-  overflow: hidden; /* falls nötig */
+  
   position: relative;
   display: flex;
   align-items: center;
