@@ -502,7 +502,7 @@ input, select, textarea {
 /* Type */
 
 	body, input, textarea, select {
-		font-family: "Roboto", "sans-serif";		/* SCHRIFT VERÄNDERN HIER */
+		font-family: "Montserrat", "sans-serif";		/* SCHRIFT VERÄNDERN HIER */
 		font-weight: 300;
 		font-size: 18pt;
 		line-height: 1.75em;
@@ -2118,7 +2118,7 @@ input, select, textarea {
 			}
 
 			.main.style3.secondary {
-				background: #f7f7f5;			/*HINTERGRUNDFARBE HIER ÄNDERN */
+				background: #ebe2d7;			/*HINTERGRUNDFARBE HIER ÄNDERN */
 			}
 
 		.main.styleOffer {
@@ -2936,7 +2936,7 @@ input, select, textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-	background-color: white;					/* HINTERGRUNDFARBE HIER */
+	background-color: #fec065			/* HINTERGRUNDFARBE HIER */
 }
 
 /* Flexbox für die Anordnung von Text und Bild */
