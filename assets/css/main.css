@@ -502,11 +502,11 @@ input, select, textarea {
 /* Type */
 
 	body, input, textarea, select {
-		font-family: "Source Sans Pro", "sans-serif";
+		font-family: "Roboto", "sans-serif";		/* SCHRIFT VERÄNDERN HIER */
 		font-weight: 300;
 		font-size: 18pt;
 		line-height: 1.75em;
-		color: #39454b;
+		color: #032130;						/* SCHRITFTFARBE VERÄNDERN */
 		letter-spacing: 0.025em;
 	}
 
@@ -2118,10 +2118,25 @@ input, select, textarea {
 			}
 
 			.main.style3.secondary {
-				background: #f5f6f7;
+				background: #f7f7f5;			/*HINTERGRUNDFARBE HIER ÄNDERN */
 			}
 
+		.main.styleOffer {
+			text-align: center;
+			padding: 6em 0 6em 0;
+		}
 
+			.main.styleOffer .content > header {
+				margin-bottom: 2em;
+			}
+
+			.main.styleOffer.primary {
+				background: #d5d6fe;			/* OFFERS COLOUR */
+			}
+
+			.main.styleOffer.secondary {
+				background: #f5f6f7;
+			}
 
 		.main.style4 {
 				text-align: left;
@@ -2744,6 +2759,7 @@ input, select, textarea {
     min-height: 80vh;
     max-width: 1200px;
     margin: 0 auto;
+	
 }
 
 /* Bild-Container */
@@ -2920,6 +2936,7 @@ input, select, textarea {
     display: flex;
     justify-content: center;
     align-items: center;
+	background-color: white;					/* HINTERGRUNDFARBE HIER */
 }
 
 /* Flexbox für die Anordnung von Text und Bild */
