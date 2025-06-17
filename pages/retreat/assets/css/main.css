@@ -2552,9 +2552,8 @@ input, select, textarea {
     justify-content: space-between;
     padding: 50px;
     min-height: 80vh;
-    
-    
-	background-color: #9ac8e9;
+
+	background-color: #bbc4aa;									/* FARBE ABOUT HIER */
 }
 
 /* Text-Container */
@@ -2642,9 +2641,9 @@ input, select, textarea {
     align-items: center;
     justify-content: space-between;
     padding: 50px;
-    min-height: 80vh;
-    max-width: 1200px;
-    margin: 0 auto;
+    background-color: #7b8469;
+	color: white
+	;
 }
 
 /* Text-Container */
@@ -2733,9 +2732,8 @@ input, select, textarea {
     align-items: center;
     justify-content: space-between;
     padding: 50px;
-    min-height: 80vh;
-    max-width: 1200px;
-    margin: 0 auto;
+    
+	background-color: #ebe2d7;
 }
 
 /* Bild-Container */
