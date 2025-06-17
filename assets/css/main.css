@@ -506,7 +506,7 @@ input, select, textarea {
 		font-weight: 300;
 		font-size: 18pt;
 		line-height: 1.75em;
-		color: #39454b;
+		color: #032130;						/* SCHRITFTFARBE VERÄNDERN */
 		letter-spacing: 0.025em;
 	}
 
@@ -2759,6 +2759,7 @@ input, select, textarea {
     min-height: 80vh;
     max-width: 1200px;
     margin: 0 auto;
+	
 }
 
 /* Bild-Container */
@@ -2935,6 +2936,7 @@ input, select, textarea {
     display: flex;
     justify-content: center;
     align-items: center;
+	background-color: white;					/* HINTERGRUNDFARBE HIER */
 }
 
 /* Flexbox für die Anordnung von Text und Bild */
