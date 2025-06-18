@@ -2578,6 +2578,18 @@ input, select, textarea {
     transition: all 0.8s ease-in-out 0.2s; /* Leichte Verzögerung für den Text */
 }
 
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-text {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
 /* Bild-Container */
 .image-container {
     flex: 1;
