@@ -381,26 +381,26 @@
 						<p>+49 (0)152 57203928</p>
 						<p>who.i.am.ycm@gmail.com</p>
 					</header>
-					<form
-						action="https://formspree.io/f/mdkznebz"
-						method="POST"
-						>
+					<form action="https://formspree.io/f/mdkznebz" method="POST" class="contact-form">
+					<div class="form-row">
 						<label>
-							Your name:
-							<textarea name="words"></textarea>
+						
+						<input type="text" name="name" required placeholder="Name">
 						</label>
+						<label>
+					
+						<input type="email" name="email" required placeholder="Email">
+						</label>
+					</div>
 
-						<label>
-							Your email:
-							<input type="email" name="email">
-						</label>
-						<label>
-							Your message:
-							<textarea name="message"></textarea>
-						</label>
-						<!-- your other form fields go here -->
-						<button type="submit" class="style3">Send</button>
+					<label>
+						
+						<textarea name="message" required placeholder="Message"></textarea>
+					</label>
+
+					<button id="mein-button" type="submit">Send Message</button>
 					</form>
+
 				</div>
 			</section>
 

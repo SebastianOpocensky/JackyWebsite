@@ -2616,6 +2616,69 @@ input, select, textarea {
   border-radius: 1rem;
 }
 
+/* Kontaktformular Layout-Anpassung */
+.contact-form {
+  margin-top: 2rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.form-row > label {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75em;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form button.style3 {
+  padding: 0.75em 2em;
+  font-size: 1em;
+  background-color: #8785e6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button.style3:hover {
+  background-color: #6b69d6;
+}
+
+/* Mobile Optimierung */
+@media screen and (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+
 /* Mobil-Optimierung */
 @media (max-width: 768px) {
   .content-container {
@@ -3027,4 +3090,28 @@ input, select, textarea {
     .retreat-heading.visible, .retreat-text.visible, .retreat-button.visible, .retreat-image.visible {
         transform: translateY(0);
     }
+}
+
+#mein-button {
+  background-color: #8785e6; /* Lila Hintergrund */
+  color: white;             /* Weißer Text */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+
+  display: inline-flex;         /* Flexbox für bessere Zentrierung */
+  align-items: center;          /* Vertikale Zentrierung */
+  justify-content: center;      /* Horizontale Zentrierung */
+  line-height: 1.2;             /* Bessere Zeilenhöhe */
+  text-align: center;
+}
+
+#mein-button:hover {
+  background-color: #fec065; /* Orange bei Hover */
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
