@@ -2549,12 +2549,13 @@ input, select, textarea {
 /*  About Section */
 .about-section {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column; /* Inhalt untereinander */
+    align-items: center;     /* horizontal zentriert */
+    justify-content: center; /* vertikal zentriert */
     padding: 50px;
     min-height: 80vh;
-
-	background-color: #bbc4aa;									/* FARBE ABOUT HIER */
+    background-color: #bbc4aa;													/* FARBE ABOUT HIER */
+    text-align: center;      /* Text zentrieren */									
 }
 
 /* Text-Container */
@@ -2565,14 +2566,15 @@ input, select, textarea {
 }
 
 .about-heading {
-    opacity: 0; /* Start: unsichtbar */
-    transform: translateX(-100%); /* Start: links außerhalb des Sichtfelds */
+    opacity: 1; 
+    transform: none;
     transition: all 0.8s ease-in-out;
+	
 }
 
 .about-text {
-    opacity: 0; /* Start: unsichtbar */
-    transform: translateX(-100%); /* Start: links außerhalb des Sichtfelds */
+    opacity: 1; 
+    transform: none;
     transition: all 0.8s ease-in-out 0.2s; /* Leichte Verzögerung für den Text */
 }
 
@@ -3039,7 +3041,6 @@ input, select, textarea {
 
 
 /* ABOUT HOSTS SECTION */
-/* ABOUT HOSTS SECTION */
 #about-hosts {
   text-align: center;
   background-color: #bbc4aa;
@@ -3185,4 +3186,73 @@ input, select, textarea {
   display: inline-flex;
   align-items: center;
   gap: 1em;
+}
+
+#mein-button {
+  background-color: #8785e6; /* Lila Hintergrund */
+  color: white;             /* Weißer Text */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+
+  display: inline-flex;         /* Flexbox für bessere Zentrierung */
+  align-items: center;          /* Vertikale Zentrierung */
+  justify-content: center;      /* Horizontale Zentrierung */
+  line-height: 1.2;             /* Bessere Zeilenhöhe */
+  text-align: center;
+}
+
+#mein-button:hover {
+  background-color: #fec065; /* Orange bei Hover */
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* NEUE RETREAT INTRO */
+
+.retreat-introNew {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	padding: 60px 20px;
+	max-width: 1200px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	gap: 40px;
+}
+
+.retreat-text {
+	flex: 1 1 45%;
+	opacity: 0;
+	transform: translateX(0);
+	transition: all 1s ease;
+}
+
+.retreat-right {
+	transform: translateX(100px);
+}
+
+.retreat-left {
+	transform: translateX(-100px);
+}
+
+.retreat-text.visible {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+	.retreat-introNew {
+		flex-direction: column;
+	}
+	.retreat-text {
+		opacity: 1 !important;
+		transform: none !important;
+	}
 }
