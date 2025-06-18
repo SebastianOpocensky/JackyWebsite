@@ -3213,3 +3213,46 @@ input, select, textarea {
 }
 
 
+/* NEUE RETREAT INTRO */
+
+.retreat-introNew {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	padding: 60px 20px;
+	max-width: 1200px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	gap: 40px;
+}
+
+.retreat-text {
+	flex: 1 1 45%;
+	opacity: 0;
+	transform: translateX(0);
+	transition: all 1s ease;
+}
+
+.retreat-right {
+	transform: translateX(100px);
+}
+
+.retreat-left {
+	transform: translateX(-100px);
+}
+
+.retreat-text.visible {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+	.retreat-introNew {
+		flex-direction: column;
+	}
+	.retreat-text {
+		opacity: 1 !important;
+		transform: none !important;
+	}
+}

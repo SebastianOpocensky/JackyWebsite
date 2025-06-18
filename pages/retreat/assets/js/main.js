@@ -472,4 +472,29 @@
 			});
 
 
+			
+			document.addEventListener("DOMContentLoaded", () => {
+			if (window.innerWidth > 768) {
+				const observerOptions = {
+					threshold: 0.1
+				};
+
+				const revealOnScroll = (entries, observer) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("visible");
+							observer.unobserve(entry.target);
+						}
+					});
+				};
+
+				const observer = new IntersectionObserver(revealOnScroll, observerOptions);
+
+				document.querySelectorAll(".retreat-text").forEach(el => {
+					observer.observe(el);
+				});
+			}
+		});
+
+
 })(jQuery);
