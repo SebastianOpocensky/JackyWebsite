@@ -2584,11 +2584,18 @@ input, select, textarea {
     align-items: center;
   }
 
+  .text-container {
+    max-width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+
   .about-text {
     transform: none !important;
     opacity: 1 !important;
   }
 }
+
 
 /* Bild-Container */
 .image-container {
