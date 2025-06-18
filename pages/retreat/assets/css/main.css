@@ -3086,7 +3086,7 @@ input, select, textarea {
 }
 
 .host-image {
-  width: 300px;
+  width: 420px;
   max-width: 90%;
   opacity: 0;
   transform: translateX(0);
