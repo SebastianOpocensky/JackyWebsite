@@ -2898,6 +2898,23 @@ input, select, textarea {
     }
 }
 
+.extra-text {
+    display: none; /* Initial versteckt */
+}
+
+.extra-text.show {
+    display: block;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.8s ease-in-out 0.4s;
+}
+
+.extra-text.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
 /* New About Section */
 
 /* Grundlegende Stile für die Sektion */
@@ -2914,12 +2931,14 @@ input, select, textarea {
     flex: 1;
     max-width: 50%;
     text-align: left;
+	
 }
 
 .about-heading {
     opacity: 0; /* Start: unsichtbar */
-    transform: translateX(-100%); /* Start: links außerhalb des Sichtfelds */
+    transform: translateX(-30%) scale(0.25) !important; 
     transition: all 0.8s ease-in-out;
+	margin-bottom: -100px;
 }
 
 .about-text {
