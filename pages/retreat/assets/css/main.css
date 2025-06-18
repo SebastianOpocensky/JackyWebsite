@@ -2590,6 +2590,11 @@ input, select, textarea {
     padding: 20px;
   }
 
+  .about-heading {
+    opacity: 1; 
+    transform: none;
+  }
+
   .about-text {
     transform: none !important;
     opacity: 1 !important;
