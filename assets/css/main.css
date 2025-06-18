@@ -2507,13 +2507,13 @@ input, select, textarea {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 20rem;
   margin-top: 2rem;
 }
 
 .feature {
   flex: 1 1 calc(25% - 2rem); /* Four items per row, with spacing */
-  max-width: calc(25% - 2rem); /* Prevents overflowing */
+  max-width: calc(25% - 40rem); /* Prevents overflowing */
   padding: 1.5rem;
   box-sizing: border-box;
   background: rgba(255, 255, 255, 0.05);
@@ -2523,7 +2523,7 @@ input, select, textarea {
 }
 
 .feature img {
-  max-width: 100px;
+  max-width: 300px;
   height: auto;
   margin-bottom: 1rem;
 }
@@ -3009,7 +3009,7 @@ input, select, textarea {
 
 /* Neue Retreat Sektion */
 .retreat-section {
-    padding: 50px 20px;
+    padding: 50px 20px 50px 1px;
     min-height: 100vh; /* Sektion füllt die Höhe des Bildschirms */
     display: flex;
     justify-content: center;
@@ -3024,13 +3024,17 @@ input, select, textarea {
     align-items: center;
     max-width: 1200px;
     width: 100%;
-    gap: 20px;
+    gap: 100px;
+	padding-left: 0; /* Entfernt jegliches linkes Padding */
+    margin-left: 1px; /* Reduziert den linken Abstand, falls gewünscht */
 }
 
 /* Text-Inhalte (links) */
 .text-content {
     flex: 1;
     text-align: left;
+	margin-left: 0; /* Entfernt jeglichen linken Margin */
+    padding-left: 1px; /* Optional: Kleineres Padding links */
 }
 
 /* Bild-Inhalt (rechts) */
