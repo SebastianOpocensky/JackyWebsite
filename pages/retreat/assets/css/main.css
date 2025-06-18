@@ -2549,12 +2549,13 @@ input, select, textarea {
 /*  About Section */
 .about-section {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column; /* Inhalt untereinander */
+    align-items: center;     /* horizontal zentriert */
+    justify-content: center; /* vertikal zentriert */
     padding: 50px;
     min-height: 80vh;
-
-	background-color: #bbc4aa;									/* FARBE ABOUT HIER */
+    background-color: #bbc4aa;													/* FARBE ABOUT HIER */
+    text-align: center;      /* Text zentrieren */									
 }
 
 /* Text-Container */
@@ -2565,14 +2566,15 @@ input, select, textarea {
 }
 
 .about-heading {
-    opacity: 0; /* Start: unsichtbar */
-    transform: translateX(-100%); /* Start: links außerhalb des Sichtfelds */
+    opacity: 1; 
+    transform: none;
     transition: all 0.8s ease-in-out;
+	
 }
 
 .about-text {
-    opacity: 0; /* Start: unsichtbar */
-    transform: translateX(-100%); /* Start: links außerhalb des Sichtfelds */
+    opacity: 1; 
+    transform: none;
     transition: all 0.8s ease-in-out 0.2s; /* Leichte Verzögerung für den Text */
 }
 
@@ -3038,7 +3040,6 @@ input, select, textarea {
 }
 
 
-/* ABOUT HOSTS SECTION */
 /* ABOUT HOSTS SECTION */
 #about-hosts {
   text-align: center;
