@@ -467,5 +467,9 @@
 				});
 			});
 
+			document.addEventListener('DOMContentLoaded', () => {
+				const button = document.getElementById('mein-button');
+			});
+
 
 })(jQuery);

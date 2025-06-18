@@ -3187,3 +3187,29 @@ input, select, textarea {
   align-items: center;
   gap: 1em;
 }
+
+#mein-button {
+  background-color: #8785e6; /* Lila Hintergrund */
+  color: white;             /* Weißer Text */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+
+  display: inline-flex;         /* Flexbox für bessere Zentrierung */
+  align-items: center;          /* Vertikale Zentrierung */
+  justify-content: center;      /* Horizontale Zentrierung */
+  line-height: 1.2;             /* Bessere Zeilenhöhe */
+  text-align: center;
+}
+
+#mein-button:hover {
+  background-color: #fec065; /* Orange bei Hover */
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+
