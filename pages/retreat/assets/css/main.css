@@ -1529,7 +1529,7 @@ input, select, textarea {
 			-webkit-transform: translateX(0);
 			-ms-transform: translateX(0);
 			transform: translateX(0);
-			width: 50%;
+			width: 33.3333333%;
 			position: relative;
 			opacity: 1.0;
 		}
@@ -3086,7 +3086,7 @@ input, select, textarea {
 }
 
 .host-image {
-  width: 300px;
+  width: 420px;
   max-width: 90%;
   opacity: 0;
   transform: translateX(0);

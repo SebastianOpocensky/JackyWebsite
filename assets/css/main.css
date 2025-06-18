@@ -2507,13 +2507,13 @@ input, select, textarea {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 20rem;
   margin-top: 2rem;
 }
 
 .feature {
   flex: 1 1 calc(25% - 2rem); /* Four items per row, with spacing */
-  max-width: calc(25% - 2rem); /* Prevents overflowing */
+  max-width: calc(25% - 40rem); /* Prevents overflowing */
   padding: 1.5rem;
   box-sizing: border-box;
   background: rgba(255, 255, 255, 0.05);
@@ -2523,7 +2523,7 @@ input, select, textarea {
 }
 
 .feature img {
-  max-width: 100px;
+  max-width: 300px;
   height: auto;
   margin-bottom: 1rem;
 }
@@ -2615,6 +2615,69 @@ input, select, textarea {
   max-width: 300px;
   border-radius: 1rem;
 }
+
+/* Kontaktformular Layout-Anpassung */
+.contact-form {
+  margin-top: 2rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.form-row > label {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75em;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form button.style3 {
+  padding: 0.75em 2em;
+  font-size: 1em;
+  background-color: #8785e6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button.style3:hover {
+  background-color: #6b69d6;
+}
+
+/* Mobile Optimierung */
+@media screen and (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
+
 
 /* Mobil-Optimierung */
 @media (max-width: 768px) {
@@ -2835,6 +2898,23 @@ input, select, textarea {
     }
 }
 
+.extra-text {
+    display: none; /* Initial versteckt */
+}
+
+.extra-text.show {
+    display: block;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.8s ease-in-out 0.4s;
+}
+
+.extra-text.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
 /* New About Section */
 
 /* Grundlegende Stile für die Sektion */
@@ -2851,12 +2931,14 @@ input, select, textarea {
     flex: 1;
     max-width: 50%;
     text-align: left;
+	
 }
 
 .about-heading {
     opacity: 0; /* Start: unsichtbar */
-    transform: translateX(-100%); /* Start: links außerhalb des Sichtfelds */
+    transform: translateX(-30%) scale(0.25) !important; 
     transition: all 0.8s ease-in-out;
+	margin-bottom: -100px;
 }
 
 .about-text {
@@ -2927,7 +3009,7 @@ input, select, textarea {
 
 /* Neue Retreat Sektion */
 .retreat-section {
-    padding: 50px 20px;
+    padding: 50px 20px 50px 1px;
     min-height: 100vh; /* Sektion füllt die Höhe des Bildschirms */
     display: flex;
     justify-content: center;
@@ -2942,13 +3024,17 @@ input, select, textarea {
     align-items: center;
     max-width: 1200px;
     width: 100%;
-    gap: 20px;
+    gap: 100px;
+	padding-left: 0; /* Entfernt jegliches linkes Padding */
+    margin-left: 1px; /* Reduziert den linken Abstand, falls gewünscht */
 }
 
 /* Text-Inhalte (links) */
 .text-content {
     flex: 1;
     text-align: left;
+	margin-left: 0; /* Entfernt jeglichen linken Margin */
+    padding-left: 1px; /* Optional: Kleineres Padding links */
 }
 
 /* Bild-Inhalt (rechts) */
@@ -3027,4 +3113,29 @@ input, select, textarea {
     .retreat-heading.visible, .retreat-text.visible, .retreat-button.visible, .retreat-image.visible {
         transform: translateY(0);
     }
+}
+
+#mein-button {
+  background-color: #8785e6; /* Lila Hintergrund */
+  color: white;             /* Weißer Text */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+
+  display: inline-flex;         /* Flexbox für bessere Zentrierung */
+  align-items: center;          /* Vertikale Zentrierung */
+  justify-content: center;      /* Horizontale Zentrierung */
+  line-height: 1.2;             /* Bessere Zeilenhöhe */
+  text-align: center;
+}
+
+#mein-button:hover {
+  background-color: #fec065; /* Orange bei Hover */
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }

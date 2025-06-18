@@ -302,6 +302,34 @@
 				}
 			});
 
+			document.addEventListener('DOMContentLoaded', () => {
+				const readMoreLink = document.getElementById('read-more-toggle');
+				const extraText = document.querySelector('.extra-text');
+
+				if (readMoreLink && extraText) {
+					readMoreLink.addEventListener('click', (e) => {
+						e.preventDefault(); // Verhindert Navigation
+
+						const isVisible = extraText.classList.contains('show');
+
+						if (!isVisible) {
+							extraText.classList.add('show'); // Macht den Text sichtbar
+							setTimeout(() => {
+								extraText.classList.add('active'); // Startet die Animation
+							}, 10); // Kleiner Timeout für flüssige Animation
+							readMoreLink.textContent = 'Read less';
+						} else {
+							extraText.classList.remove('active'); // Animation rückgängig
+							setTimeout(() => {
+								extraText.classList.remove('show'); // Text ausblenden
+							}, 800); // Warte, bis die Animation abgeschlossen ist (0.8s)
+							readMoreLink.textContent = 'Read more';
+						}
+					});
+				}
+			});
+
+
 			// About Section (Hauptseite)
 			document.addEventListener('DOMContentLoaded', () => {
 				const section = document.querySelector('.about-section');
