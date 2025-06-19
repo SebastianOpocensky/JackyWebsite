@@ -386,4 +386,31 @@
 				checkVisibility(); // Prüfe sofort, falls die Sektion schon sichtbar ist
 			});
 
+
+			document.addEventListener("DOMContentLoaded", function () {
+				const items = document.querySelectorAll(".image-text-item");
+
+				// Nur Animation auf Desktop-Geräten aktivieren
+				if (window.innerWidth > 768) {
+					const observer = new IntersectionObserver(
+					(entries) => {
+						entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("animate-in");
+						}
+						});
+					},
+					{ threshold: 0.2 }
+					);
+
+					items.forEach((item) => observer.observe(item));
+				} else {
+					// Mobil: Klassen direkt setzen, ohne Observer
+					items.forEach((item) => {
+					item.classList.add("animate-in");
+					});
+				}
+				});
+
+
 })(jQuery);
