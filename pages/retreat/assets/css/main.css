@@ -3162,27 +3162,37 @@ input, select, textarea {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
-  
+  align-items: stretch; /* Wichtig */
+  gap: 2rem;
+  margin: 2rem 0;
   flex-wrap: wrap;
   text-align: justify;
-  background-color: #bbc4aa;
 }
 
 .host-image {
-  width: 420px;
-  max-width: 90%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Bild füllt Container und schneidet ggf. Überstände */
+  max-width: 420px;
   opacity: 0;
   transform: translateX(0);
   transition: all 1s ease;
+}
+
+.host > img {
+  flex: 1 1 auto;
+  height: auto; /* Wird gleich ersetzt */
+  align-self: stretch; /* Wichtig, um Höhe des Texts anzunehmen */
 }
 
 .host-text {
   max-width: 300px;
+  flex: 1 1 auto;
   opacity: 0;
   transform: translateX(0);
   transition: all 1s ease;
 }
+
 
 /* Animationen */
 .from-left.show {
