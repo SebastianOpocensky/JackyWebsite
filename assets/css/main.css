@@ -3115,6 +3115,65 @@ input, select, textarea {
     }
 }
 
+
+/* Neue WHY CHOOSE US */
+
+.image-text-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+ 
+  background-color: #ebe2d7;
+
+  padding: 0 2rem;
+}
+
+.image-text-item {
+  width: 22%;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-in-out;
+}
+
+.image-text-item img {
+  max-width: 100%;
+  height: auto;
+  width: 80%;        				/* 80% für kleinere Bilder */
+  max-height: 250px; 				 /* wie hoch das Bild maximal sein soll */
+  object-fit: cover;  				/* passt das Bild an, ohne es zu verzerren */
+  
+}
+
+.image-text-item p {
+  text-align: justify;
+}
+
+
+/* Animation-Klasse, die über JS hinzugefügt wird */
+.image-text-item.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Verhalten: auf Mobilgeräten untereinander, keine Animation */
+@media (max-width: 768px) {
+  .image-text-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-text-item {
+    width: 90%;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+
+/* NEUER BUTTON */
+
 #mein-button {
   background-color: #8785e6; /* Lila Hintergrund */
   color: white;             /* Weißer Text */
