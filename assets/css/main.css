@@ -2899,8 +2899,9 @@ input, select, textarea {
     }
 }
 
+/* Extra hidden Text */
 .mission-text.extra-text {
-    display: block;  /* Initial versteckt */
+    display: block;  
 }
 
 .mission-text.extra-text.show {
@@ -3007,6 +3008,22 @@ input, select, textarea {
     }
 }
 
+/* Extra hidden Text */
+.about-text.extra-text {
+    display: block;
+}
+
+.about-text.extra-text.show {
+    display: block;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.8s ease-in-out 0.4s;
+}
+
+.about-text.extra-text.show.active {
+    opacity: 1;
+    transform: translateX(0);
+}
 
 /* Neue Retreat Sektion */
 .retreat-section {
