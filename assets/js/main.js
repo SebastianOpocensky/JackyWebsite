@@ -264,6 +264,7 @@
 				const image = document.querySelector('.mission-image');
 				const heading = document.querySelector('.mission-heading');
 				const text = document.querySelector('.mission-text');
+				
 
 				// Funktion, um zu prüfen, ob ein Element im Sichtfeld ist
 				function isInViewport(element) {
@@ -304,7 +305,7 @@
 
 			document.addEventListener('DOMContentLoaded', () => {
 				const readMoreLink = document.getElementById('read-more-toggle');
-				const extraText = document.querySelector('.extra-text');
+				const extraText = document.querySelector('.mission-text.extra-text');
 
 				if (readMoreLink && extraText) {
 					readMoreLink.addEventListener('click', (e) => {
@@ -336,6 +337,7 @@
 				const image = document.querySelector('.about-image');
 				const heading = document.querySelector('.about-heading');
 				const text = document.querySelector('.about-text');
+				
 
 				// Funktion, um zu prüfen, ob ein Element im Sichtfeld ist
 				function isInViewport(element) {
@@ -361,6 +363,33 @@
 					heading.classList.add('active');
 					text.classList.add('active');
 				}
+
+
+				const readMoreLinkAbout = document.getElementById('read-more-toggle-about');
+				const extraTextAbout = document.querySelector('.about-text.extra-text');
+
+				if (readMoreLinkAbout && extraTextAbout) {
+					readMoreLinkAbout.addEventListener('click', (e) => {
+						e.preventDefault();
+						const isVisible = extraTextAbout.classList.contains('show');
+
+						if (!isVisible) {
+							extraTextAbout.classList.add('show');
+							setTimeout(() => {
+								extraTextAbout.classList.add('active');
+							}, 10);
+							readMoreLinkAbout.textContent = 'Read less';
+						} else {
+							extraTextAbout.classList.remove('active');
+							setTimeout(() => {
+								extraTextAbout.classList.remove('show');
+							}, 800);
+							readMoreLinkAbout.textContent = 'Read more';
+						}
+					});
+				}
+
+
 			});
 
 			// Retreat Sektion (Hauptseite)
@@ -411,6 +440,7 @@
 					});
 				}
 				});
+
 
 
 })(jQuery);

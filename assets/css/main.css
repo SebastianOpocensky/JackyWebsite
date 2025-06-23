@@ -2856,6 +2856,7 @@ input, select, textarea {
 
 /* Neue Mission Section */
 
+
 /* Grundlegende Stile für die Sektion */
 .mission-section {
     display: flex;
@@ -2941,18 +2942,19 @@ input, select, textarea {
     }
 }
 
-.extra-text {
-    display: none; /* Initial versteckt */
+/* Extra hidden Text */
+.mission-text.extra-text {
+    display: block;  
 }
 
-.extra-text.show {
+.mission-text.extra-text.show {
     display: block;
     opacity: 0;
     transform: translateX(100%);
     transition: all 0.8s ease-in-out 0.4s;
 }
 
-.extra-text.active {
+.mission-text.extra-text.show.active {
     opacity: 1;
     transform: translateX(0);
 }
@@ -3049,6 +3051,22 @@ input, select, textarea {
     }
 }
 
+/* Extra hidden Text */
+.about-text.extra-text {
+    display: block;
+}
+
+.about-text.extra-text.show {
+    display: block;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.8s ease-in-out 0.4s;
+}
+
+.about-text.extra-text.show.active {
+    opacity: 1;
+    transform: translateX(0);
+}
 
 /* Neue Retreat Sektion */
 .retreat-section {
