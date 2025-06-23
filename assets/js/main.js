@@ -304,7 +304,7 @@
 
 			document.addEventListener('DOMContentLoaded', () => {
 				const readMoreLink = document.getElementById('read-more-toggle');
-				const extraText = document.querySelector('.extra-text');
+				const extraText = document.querySelector('.mission-text.extra-text');
 
 				if (readMoreLink && extraText) {
 					readMoreLink.addEventListener('click', (e) => {
@@ -411,6 +411,7 @@
 					});
 				}
 				});
+
 
 
 })(jQuery);
