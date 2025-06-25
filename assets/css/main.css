@@ -46,6 +46,15 @@ blockquote, q {
 		content: none;
 	}
 
+	.content.has-bullets ul {
+	list-style-type: disc;
+	padding-left: 1.25em;
+	}
+
+	.content.has-bullets li {
+	padding-left: 0.25em;
+	}
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -3210,4 +3219,59 @@ Responsives Verhalten
   background-color: #fec065; /* Orange bei Hover */
   transform: scale(1.05);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* ============ KREUZ BUTTON (Back to Main Page) ================== */
+
+/* === Back to Main Page Button === */
+.back-button {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Kreis-Hintergrund (optional) */
+  background-color: #8785e6;
+  border-radius: 50%;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  /* Übergang für Hover */
+  transition: background-color 0.2s ease;
+}
+
+.back-button::before,
+.back-button::after {
+  content: '';
+  position: absolute;
+
+  /* Das weiße Kreuz */
+  background-color: #fff;
+
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 2px;
+
+  transform-origin: center;
+}
+
+.back-button::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.back-button::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* Hover-Effekt (optional) */
+.back-button:hover {
+  background-color: #fec065;
 }
