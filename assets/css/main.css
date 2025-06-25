@@ -46,6 +46,15 @@ blockquote, q {
 		content: none;
 	}
 
+	.content.has-bullets ul {
+	list-style-type: disc;
+	padding-left: 1.25em;
+	}
+
+	.content.has-bullets li {
+	padding-left: 0.25em;
+	}
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
