@@ -2130,6 +2130,11 @@ input, select, textarea {
 				background: #ebe2d7;			/*HINTERGRUNDFARBE HIER ÄNDERN */
 			}
 
+
+
+		/*===================OFFER SECTION BELOW===============*/
+
+
 		.main.styleOffer {
 			text-align: center;
 			padding: 6em 0 6em 0;
@@ -3275,3 +3280,74 @@ Responsives Verhalten
 .back-button:hover {
   background-color: #fec065;
 }
+
+
+
+/* ============== NEUE OFFERS SECTION =====================*/
+
+#offersNew {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.offer-new {
+  background: #8785e6;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  transform: translateX(0);
+  transition: transform 1.8s ease, box-shadow 1.8s ease;
+  opacity: 0;
+}
+
+.offer-new img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.offer-new h3 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.offer-new p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Animation */
+.from-left {
+  transform: translateX(-50px);
+}
+.from-right {
+  transform: translateX(-50px);
+}
+.offer-new.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Hover tile effect */
+.offer-new.from-left.visible:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.offer-new.from-right.visible:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .offer-new {
+    opacity: 1; 
+    transform: none ;
+    transition: none ;
+  }
+}
+
