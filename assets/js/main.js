@@ -441,26 +441,25 @@
 				}
 				});
 
-			
-			document.addEventListener('DOMContentLoaded', () => {
-			// Skip animations on mobile
-			if (window.innerWidth <= 768) return;
+	
+			document.addEventListener("DOMContentLoaded", () => {
+				const items = document.querySelectorAll(".grid-item");
 
-			const offerNewItems = document.querySelectorAll('.offer-new');
+				const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add("visible");
+						observer.unobserve(entry.target); // Nur einmal animieren
+					}
+					});
+				},
+				{ threshold: 0.2 }
+				);
 
-			const observer = new IntersectionObserver(entries => {
-				entries.forEach(entry => {
-				if (entry.isIntersecting) {
-					entry.target.classList.add('visible');
-					observer.unobserve(entry.target);
-				}
-				});
-			}, {
-				threshold: 0.2
+				items.forEach(item => observer.observe(item));
 			});
 
-			offerNewItems.forEach(item => observer.observe(item));
-			});
 
 
 

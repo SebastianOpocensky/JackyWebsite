@@ -3285,82 +3285,61 @@ Responsives Verhalten
 
 /* ============== NEUE OFFERS SECTION =====================*/
 
-#offersNew {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  background: #d5d6fe;
-}
-
-.offer-new {
-  background: #d5d6fe;
+#special-section {
   text-align: center;
-  transform: translateX(0);
-  transition: transform 1.8s ease, box-shadow 1.8s ease;
-  
+  padding: 2rem 1rem;
+  background-color: #d5d6fe;
 }
 
-.offer-new img {
-  width: auto;
-  height: auto;
-  
+.section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.offer-new h3 {
-  margin-top: 1rem;
+.section-header p {
   font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 3rem;
 }
 
-.offer-new p {
-  font-size: 1rem;
-  
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 600px;
+  margin: 0 auto 3rem;
 }
 
-/* Animation */
-.from-left {
-  transform: translateX(50px);
-}
-.from-right {
-  transform: translateX(-50px);
-}
-.offer-new.visible {
+.grid-item {
+  background-color: #d5d6fe;
+  padding: 1.5rem;
+  opacity: 0;
   transform: translateX(0);
+  transition: all 2.8s ease-out;
+}
+
+.grid-item img {
+  width: auto;
+  margin-bottom: 1rem;
+}
+
+/* Animation beim Sichtbarwerden */
+.grid-item.from-left.visible {
   opacity: 1;
+  transform: translateX(0);
 }
 
-/* Hover tile effect */
-.offer-new.from-left.visible:hover {
-  transform: scale(1.03);
- 
+.grid-item.from-right.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-.offer-new.from-right.visible:hover {
-  transform: scale(1.03);
- 
+.from-left {
+  transform: translateX(-100px);
 }
 
-/* Responsive behavior */
-@media (max-width: 768px) {
-  .offer-new {
-    opacity: 1; 
-    transform: none ;
-    transition: none ;
-  }
-}
-
-#offersNewButton {
-  background: #d5d6fe;
-  padding: 100px 0; /* Optional: für vertikalen Platz */
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-#offersNewHeadline {
-  background: #d5d6fe;
-  padding: 100px 0; /* Optional: für vertikalen Platz */
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+.from-right {
+  transform: translateX(100px);
 }
 
 
