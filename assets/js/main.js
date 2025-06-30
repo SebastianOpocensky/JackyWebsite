@@ -441,6 +441,27 @@
 				}
 				});
 
+			
+			document.addEventListener('DOMContentLoaded', () => {
+			// Skip animations on mobile
+			if (window.innerWidth <= 768) return;
+
+			const offerNewItems = document.querySelectorAll('.offer-new');
+
+			const observer = new IntersectionObserver(entries => {
+				entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('visible');
+					observer.unobserve(entry.target);
+				}
+				});
+			}, {
+				threshold: 0.2
+			});
+
+			offerNewItems.forEach(item => observer.observe(item));
+			});
+
 
 
 })(jQuery);
