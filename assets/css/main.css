@@ -3204,6 +3204,7 @@ Responsives Verhalten
 
 #mein-button {
   background-color: #8785e6; /* Lila Hintergrund */
+  font-family: 'Montserrat', sans-serif; /* Alle Buttons gleiche Schrift */
   color: white;             /* Weißer Text */
   border: none;
   padding: 20px 40px;
