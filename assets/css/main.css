@@ -103,6 +103,7 @@ input, select, textarea {
 		background: #ffffff;
 		height: 100%;
 		min-width: 320px;
+		overflow-x: hidden;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -3203,6 +3204,7 @@ Responsives Verhalten
 
 #mein-button {
   background-color: #8785e6; /* Lila Hintergrund */
+  font-family: 'Montserrat', sans-serif; /* Alle Buttons gleiche Schrift */
   color: white;             /* Weißer Text */
   border: none;
   padding: 20px 40px;
@@ -3340,6 +3342,12 @@ Responsives Verhalten
 
 .from-right {
   transform: translateX(100px);
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 
