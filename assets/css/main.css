@@ -3288,20 +3288,15 @@ Responsives Verhalten
 #offersNew {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
   background: #d5d6fe;
 }
 
 .offer-new {
   background: #d5d6fe;
-  border-radius: 1rem;
-  
-  padding: 1rem;
   text-align: center;
   transform: translateX(0);
   transition: transform 1.8s ease, box-shadow 1.8s ease;
-  opacity: 0;
+  
 }
 
 .offer-new img {
@@ -3322,7 +3317,7 @@ Responsives Verhalten
 
 /* Animation */
 .from-left {
-  transform: translateX(-50px);
+  transform: translateX(50px);
 }
 .from-right {
   transform: translateX(-50px);
