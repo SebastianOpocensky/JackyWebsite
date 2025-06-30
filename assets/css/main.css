@@ -3290,12 +3290,13 @@ Responsives Verhalten
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   padding: 2rem;
+  background: #d5d6fe;
 }
 
 .offer-new {
-  background: #8785e6;
+  background: #d5d6fe;
   border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  
   padding: 1rem;
   text-align: center;
   transform: translateX(0);
@@ -3304,9 +3305,9 @@ Responsives Verhalten
 }
 
 .offer-new img {
-  width: 100%;
+  width: auto;
   height: auto;
-  border-radius: 0.5rem;
+  
 }
 
 .offer-new h3 {
@@ -3316,7 +3317,7 @@ Responsives Verhalten
 
 .offer-new p {
   font-size: 1rem;
-  color: #666;
+  
 }
 
 /* Animation */
@@ -3334,12 +3335,12 @@ Responsives Verhalten
 /* Hover tile effect */
 .offer-new.from-left.visible:hover {
   transform: scale(1.03);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+ 
 }
 
 .offer-new.from-right.visible:hover {
   transform: scale(1.03);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+ 
 }
 
 /* Responsive behavior */
@@ -3350,4 +3351,21 @@ Responsives Verhalten
     transition: none ;
   }
 }
+
+#offersNewButton {
+  background: #d5d6fe;
+  padding: 100px 0; /* Optional: für vertikalen Platz */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#offersNewHeadline {
+  background: #d5d6fe;
+  padding: 100px 0; /* Optional: für vertikalen Platz */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
 
