@@ -463,14 +463,20 @@
 
 			//About Section Collabsible Text
 			document.addEventListener("DOMContentLoaded", function () {
-			const button = document.querySelector(".collapsible-button");
-			const container = document.querySelector(".collapsible-container");
+				const button = document.querySelector(".collapsible-button");
+				const content = document.querySelector(".collapsible-content");
 
-			button.addEventListener("click", function () {
-				container.classList.toggle("open");
-				button.textContent = container.classList.contains("open") ? "Read Less" : "Read More";
+				button.addEventListener("click", function () {
+				const isOpen = content.style.maxHeight && content.style.maxHeight !== "0px";
+				
+				if (isOpen) {
+					content.style.maxHeight = "0px";
+					button.innerHTML = "<strong>Click for more</strong>";
+				} else {
+					content.style.maxHeight = content.scrollHeight + "px";
+					button.innerHTML = "<strong>Click to collapse</strong>";
+				}
+				});
 			});
-			});
-
 
 })(jQuery);
