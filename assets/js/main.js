@@ -441,7 +441,7 @@
 				}
 				});
 
-	
+			//Offers Grid Items fly in animation
 			document.addEventListener("DOMContentLoaded", () => {
 				const items = document.querySelectorAll(".grid-item");
 
@@ -461,6 +461,16 @@
 			});
 
 
+			//About Section Collabsible Text
+			document.addEventListener("DOMContentLoaded", function () {
+			const button = document.querySelector(".collapsible-button");
+			const container = document.querySelector(".collapsible-container");
+
+			button.addEventListener("click", function () {
+				container.classList.toggle("open");
+				button.textContent = container.classList.contains("open") ? "Read Less" : "Read More";
+			});
+			});
 
 
 })(jQuery);
