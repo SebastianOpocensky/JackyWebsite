@@ -3083,6 +3083,14 @@ input, select, textarea {
     transform: translateX(0);
 }
 
+/* ABOUT SECTION COLLAPSIBLE CONTENT */
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+
 /* ====================================================================================
 Retreat Sektion
 ======================================================================================= */
@@ -3351,10 +3359,4 @@ Responsives Verhalten
 }
 
 
-/* ABOUT SECTION COLLAPSIBLE CONTENT */
-.collapsible-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease;
-}
 
