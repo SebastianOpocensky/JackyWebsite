@@ -3109,6 +3109,7 @@ Retreat Sektion
     display: flex;
     justify-content: flex-end;
     align-items: center;
+	margin-right: -20px;
 }
 
 .retreat-image {
@@ -3116,7 +3117,7 @@ Retreat Sektion
     height: auto;
     max-height: 80vh;
     object-fit: cover;
-    border-radius: 8px;      /* Optional für abgerundete Ecken */
+    
 }
 
 /* ==================================================
