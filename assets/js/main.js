@@ -393,18 +393,23 @@
 
 				//About Section Collabsible Text
 				button.addEventListener("click", function () {
-				const isOpen = content.style.maxHeight && content.style.maxHeight !== "0px";
-				
-				if (isOpen) {
-					content.style.maxHeight = "0px";
-					button.innerHTML = "<strong>Click for more</strong>";
-				} else {
-					content.style.maxHeight = content.scrollHeight + "px";
-					button.innerHTML = "<strong>Click to collapse</strong>";
-				}
+					const isOpen = content.style.maxHeight && content.style.maxHeight !== "0px";
+
+					if (isOpen) {
+						content.style.maxHeight = "0px";
+						button.innerHTML = "<strong>Read more</strong>";
+
+						// Move button back above content
+						container.insertBefore(button, content);
+					} else {
+						content.style.maxHeight = content.scrollHeight + "px";
+						button.innerHTML = "<strong>Read less</strong>";
+
+						// Move button into the content at the bottom
+						content.appendChild(button);
+					}
 				});
 			});
-
 			
 	
 			// Retreat Sektion (Hauptseite)
