@@ -2975,14 +2975,14 @@ input, select, textarea {
 }
 
 
-/* New About Section */
+/* About Section */
 
 /* Grundlegende Stile für die Sektion */
 .about-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 50px;
+    padding: 10px 0 50px 50px;
 	background-color: #8785e6;
 }
 
@@ -2996,9 +2996,10 @@ input, select, textarea {
 
 .about-heading {
     opacity: 0; /* Start: unsichtbar */
-    transform: translateX(-30%) scale(0.25) !important; 
+    transform: translateX(-20%) scale(0.5) !important; 
     transition: all 0.8s ease-in-out;
-	margin-bottom: -100px;
+	margin: 0;
+	padding: 0;
 }
 
 .about-text {
@@ -3063,25 +3064,20 @@ input, select, textarea {
     .about-text.active,
     .about-image.active {
         opacity: 1;
+		
     }
 }
 
-/* Extra hidden Text */
-.about-text.extra-text {
-    display: block;
+
+/* ABOUT SECTION COLLAPSIBLE CONTENT */
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
 }
 
-.about-text.extra-text.show {
-    display: block;
-    opacity: 0;
-    transform: translateX(100%);
-    transition: all 0.8s ease-in-out 0.4s;
-}
 
-.about-text.extra-text.show.active {
-    opacity: 1;
-    transform: translateX(0);
-}
+
 
 /* ====================================================================================
 Retreat Sektion
@@ -3349,5 +3345,6 @@ Responsives Verhalten
     grid-template-columns: 1fr;
   }
 }
+
 
 
