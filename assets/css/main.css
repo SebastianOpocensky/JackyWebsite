@@ -3076,6 +3076,11 @@ input, select, textarea {
   transition: max-height 0.5s ease;
 }
 
+/* Button Extends Text */
+.collapsible-button {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #d5d6fe;
+}
 
 
 
