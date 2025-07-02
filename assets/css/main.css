@@ -3106,7 +3106,7 @@ Retreat Sektion
 
 .text-content {
     flex: 1 1 60%;           /* Text erhält ~60% der Breite */
-    padding-right: 30px;
+    padding-left: 30px;
 }
 
 .image-content {
@@ -3114,7 +3114,7 @@ Retreat Sektion
     display: flex;
     justify-content: flex-end;
     align-items: center;
-	margin-right: -20px;
+	margin-left: -20px;
 }
 
 .retreat-image {
