@@ -449,12 +449,13 @@
 
 
 
-			//Slider
+			//Old (deleted) Slider (but has attributes for afterlanding section)
 
 			document.querySelectorAll('.packages-image.slider').forEach(slider => {
 				const slides = slider.querySelector('.slides');
 				const imgs = slides.querySelectorAll('img');
 				let index = 0;
+				slides.style.transform = `translateX(-${index * 100}%)`;
 
 				slider.querySelector('.prev').addEventListener('click', () => {
 					index = (index > 0) ? index - 1 : imgs.length - 1;
@@ -495,6 +496,35 @@
 				});
 			}
 		});
+
+		//Neuer (active) Slider
+
+			const slides = document.querySelectorAll('.slide');
+			const dots = document.querySelectorAll('.nav-dot');
+			let current = 0;
+			let interval = setInterval(nextSlide, 8000); // 8 Sekunden
+
+			function showSlide(index) {
+				slides.forEach((slide, i) => {
+				slide.classList.toggle('active', i === index);
+				dots[i].classList.toggle('active', i === index);
+				});
+				current = index;
+			}
+
+			function nextSlide() {
+				const next = (current + 1) % slides.length;
+				showSlide(next);
+			}
+
+			dots.forEach(dot => {
+				dot.addEventListener('click', () => {
+				clearInterval(interval);
+				showSlide(parseInt(dot.dataset.index));
+				interval = setInterval(nextSlide, 5000);
+				});
+			});
+
 
 
 })(jQuery);

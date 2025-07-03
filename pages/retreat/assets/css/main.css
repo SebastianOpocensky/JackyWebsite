@@ -2367,7 +2367,7 @@ input, select, textarea {
   display: flex;
   width: 300%; /* Bei 3 Bildern */
   height: 100%;
-  animation: slide 30s infinite;
+  transition: transform  0.5s ease;
 }
 
 /* Einzelne Slides */
@@ -3308,6 +3308,67 @@ input, select, textarea {
   align-items: center;
   gap: 1em;
 }
+
+
+/* SLIDER */
+
+
+#hero-slider {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* Navigation Dots */
+.slider-nav {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.nav-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 6px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav-dot.active {
+  background-color: white;
+}
+
+
+
+/*BUTTON */
 
 #mein-button {
   background-color: #8785e6; /* Lila Hintergrund */
