@@ -2656,10 +2656,23 @@ input, select, textarea {
 	
 }
 
+.about-section img {			/*Change to support mobile devices here */
+  width: 140%;
+  height: auto;
+  display: block;
+}
+
 .about-text {
     opacity: 1; 
     transform: none;
     transition: all 0.8s ease-in-out 0.2s; /* Leichte Verzögerung für den Text */
+}
+
+@media (max-width: 768px) {			/*Change to support mobile devices here */
+  .about-section img {
+    object-fit: cover;
+	max-height: 300px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -3338,11 +3351,18 @@ input, select, textarea {
   transition: opacity 3s ease-in-out;
 }
 
+@media (max-width: 768px) {
+  .slide {
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
 .slide.active {
   opacity: 1;
 }
 
-/* Navigation Dots */
+							/* Navigation Dots */
 .slider-nav {
   position: absolute;
   bottom: 30px;
