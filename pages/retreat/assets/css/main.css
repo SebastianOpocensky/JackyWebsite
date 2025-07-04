@@ -3077,7 +3077,8 @@ input, select, textarea {
 @media (max-width: 768px) {
   .packages-image,
   .packages-text,
-  .packages-intro {
+  .packages-intro
+  .hidden-bottom {
     transform: none !important;
     opacity: 1 !important;
 	min-height: auto;
