@@ -3335,6 +3335,7 @@ input, select, textarea {
   height: 100vh;
   overflow: hidden;
   position: relative;
+  background-color: #bbc4aa;
 }
 
 .slider {
@@ -3357,18 +3358,7 @@ input, select, textarea {
 
 @media (max-width: 768px) {
   #hero-slider {
-    height: auto;
-  }
-    .slider {
-    height: auto;
-  }
-
-  .slide {
-    position: relative; /* No longer absolute */
-    height: auto;
-    background-size: contain;
-    background-position: top center;
-    background-repeat: no-repeat;
+    height: 50vh;
   }
 }
 
