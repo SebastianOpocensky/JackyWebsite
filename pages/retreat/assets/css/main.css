@@ -3356,6 +3356,23 @@ input, select, textarea {
 }
 
 @media (max-width: 768px) {
+  #hero-slider {
+    height: auto;
+  }
+    .slider {
+    height: auto;
+  }
+
+  .slide {
+    position: relative; /* No longer absolute */
+    height: auto;
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 768px) {
   .slide {
     background-position: top center;
     background-size: contain;
