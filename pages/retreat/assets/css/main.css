@@ -3080,6 +3080,7 @@ input, select, textarea {
   .packages-intro {
     transform: none !important;
     opacity: 1 !important;
+	min-height: auto;
   }
 
   .packages-content {
@@ -3358,6 +3359,7 @@ input, select, textarea {
     background-position: top center;
     background-size: contain;
     background-repeat: no-repeat;
+	min-height: auto;
   }
 }
 .slide.active {
