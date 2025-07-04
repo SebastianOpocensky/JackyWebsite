@@ -3077,7 +3077,8 @@ input, select, textarea {
 @media (max-width: 768px) {
   .packages-image,
   .packages-text,
-  .packages-intro {
+  .packages-intro
+  .hidden-bottom {
     transform: none !important;
     opacity: 1 !important;
 	min-height: auto;
@@ -3334,6 +3335,7 @@ input, select, textarea {
   height: 100vh;
   overflow: hidden;
   position: relative;
+  background-color: #bbc4aa;
 }
 
 .slider {
@@ -3352,6 +3354,12 @@ input, select, textarea {
   background-position: center;
   opacity: 0;
   transition: opacity 3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  #hero-slider {
+    height: 50vh;
+  }
 }
 
 @media (max-width: 768px) {
