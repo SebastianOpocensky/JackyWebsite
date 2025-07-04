@@ -3358,6 +3358,7 @@ input, select, textarea {
     background-position: top center;
     background-size: contain;
     background-repeat: no-repeat;
+	min-height: auto;
   }
 }
 .slide.active {
