@@ -2680,6 +2680,7 @@ input, select, textarea {
   .about-section {
     flex-direction: column;
     align-items: center;
+	min-height: auto;
   }
 
   .text-container {
