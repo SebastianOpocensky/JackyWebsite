@@ -2636,7 +2636,7 @@ input, select, textarea {
     flex-direction: column; /* Inhalt untereinander */
     align-items: center;     /* horizontal zentriert */
     justify-content: center; /* vertikal zentriert */
-    padding: 50px;
+    padding: 10px;
     min-height: 80vh;
     background-color: #bbc4aa;													/* FARBE ABOUT HIER */
     text-align: center;      /* Text zentrieren */									
@@ -2647,6 +2647,7 @@ input, select, textarea {
     flex: 1;
     max-width: 50%;
     text-align: left;
+	padding-bottom: 10px;
 }
 
 .about-heading {
@@ -2657,7 +2658,7 @@ input, select, textarea {
 }
 
 .about-section img {			/*Change to support mobile devices here */
-  width: 140%;
+  width: 120%;
   height: auto;
   display: block;
 }
