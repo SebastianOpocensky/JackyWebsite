@@ -2669,6 +2669,12 @@ input, select, textarea {
     transition: all 0.8s ease-in-out 0.2s; /* Leichte Verzögerung für den Text */
 }
 
+.about-text a {
+	color: white;
+  	text-decoration: none;
+  	font-weight: bold;
+}
+
 @media (max-width: 768px) {			/*Change to support mobile devices here */
   .about-section img {
     object-fit: cover;
@@ -3335,7 +3341,7 @@ input, select, textarea {
   height: 100vh;
   overflow: hidden;
   position: relative;
-  background-color: #bbc4aa;
+  background-color: #bbc4aa;		/*Was done so that there is no white space visible between slider and next section. Necessary due to  @media (max-width: 768px) {......*/
 }
 
 .slider {
