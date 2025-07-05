@@ -3412,8 +3412,8 @@ input, select, textarea {
   background-color: #8785e6; /* Lila Hintergrund */
   color: white;             /* Weißer Text */
   border: none;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 16px 32px;
+  font-size: 22px;
   cursor: pointer;
   border-radius: 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
