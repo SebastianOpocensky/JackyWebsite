@@ -814,7 +814,7 @@ input, select, textarea {
 				font-weight: 600;
 			}
 
-
+													/* BUTTON NAVBAR */
 			#menuToggle {
 				background: none;
 				border: none;
@@ -823,8 +823,21 @@ input, select, textarea {
 				cursor: pointer;
 			}
 
-			#menuToggle img {
-				display: block;
+			.logo-img {
+			width: 150px; /* Desktop */
+			height: auto;
+			}
+
+			@media (max-width: 768px) {
+				.logo-img {
+					width: 100px; /* Tablets und Smartphones */
+				}
+			}
+
+			@media (max-width: 480px) {
+				.logo-img {
+					width: 80px; /* kleine Smartphones */
+				}
 			}
 
 			/* New-Button implementation */
