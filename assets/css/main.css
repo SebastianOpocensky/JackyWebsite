@@ -833,9 +833,23 @@ input, select, textarea {
 				cursor: pointer;
 			}
 
-			#menuToggle img {
-				display: block;
+			.logo-img {
+			width: 150px; /* Standardgröße für Desktop */
+			height: auto;
 			}
+
+			@media (max-width: 768px) {
+				.logo-img {
+					width: 100px; /* kleinere Größe für Tablets und Smartphones */
+				}
+			}
+
+			@media (max-width: 480px) {
+				.logo-img {
+					width: 80px; /* noch kleiner für kleine Smartphones */
+				}
+			}
+
 
 
 /* Form */
