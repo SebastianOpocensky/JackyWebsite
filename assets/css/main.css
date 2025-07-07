@@ -3073,6 +3073,14 @@ input, select, textarea {
         opacity: 0;
         transition: opacity 0.8s ease-in-out;
     }
+
+	.about-image2 {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin-left: 100px;
+	margin-right: auto;
+	}
     
     .about-heading.active,
     .about-text.active,
