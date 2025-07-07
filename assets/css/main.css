@@ -3158,7 +3158,7 @@ Responsives Verhalten
     .image-content {
         flex: unset;
         width: 100%;         /* Vollbreite für Text und Bild */
-        padding: 0;
+        padding: 20px;
     }
     .image-content {
         margin-top: 20px;
