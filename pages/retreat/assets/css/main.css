@@ -3096,19 +3096,31 @@ input, select, textarea {
 @media (max-width: 768px) {
   .packages-image,
   .packages-text,
-  .packages-intro
+  .packages-intro,
   .hidden-bottom {
     transform: none !important;
     opacity: 1 !important;
 	min-height: auto;
   }
 
+  
+  .packages-text {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: auto !important;
+  }
+
   .packages-content {
-    flex-direction: column;
+	align-items: center;
+	gap: 1rem;
   }
 
   .packages-image {
     order: 1;
+  }
+
+  .packages-text {
+    margin-bottom: 1rem;
   }
 
   .packages-text {
