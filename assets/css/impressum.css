@@ -2426,6 +2426,36 @@ input, select, textarea {
     max-width: 800px;                 /* Optional: control width */
 }
 
+@media screen and (max-width: 768px) {
+    .centered-container {
+        display: block;               /* Allow natural flow */
+        text-align: left;             /* Better for small screens */
+        padding: 1rem;                /* Less padding on smaller screens */
+    }
+
+    .centered-content {
+        max-width: 100%;              /* Use full width on small screens */
+    }
+
+    body {
+        font-size: 1rem;              /* Ensure readable text */
+        line-height: 1.6;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+}
 
 /* === Back to Main Page Button === */
 .back-button {
@@ -2477,3 +2507,6 @@ input, select, textarea {
 .back-button:hover {
   background-color: #fec065;
 }
+
+
+
