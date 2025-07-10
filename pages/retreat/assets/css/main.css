@@ -2817,6 +2817,7 @@ input, select, textarea {
 .image-container {
     flex: 1;
     max-width: 40%;
+	margin-right: -50px;	/*Bild schließt bündig mit Seitenrand */
 }
 
 .experience-image {
@@ -2855,6 +2856,7 @@ input, select, textarea {
         max-width: 100%;
         margin-bottom: 20px;
         order: -1; /* Bild wird oben angezeigt */
+		margin-left: -50px;	/*Bild wieder mittig */
     }
     
     .experience-heading,
