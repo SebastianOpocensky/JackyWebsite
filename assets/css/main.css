@@ -3136,7 +3136,7 @@ Retreat Sektion
     display: flex;
     justify-content: flex-end;
     align-items: center;
-	margin-left: -20px;
+	margin-left: -100px;
 }
 
 .retreat-image {
@@ -3157,12 +3157,14 @@ Responsives Verhalten
     .text-content,
     .image-content {
         flex: unset;
+		align-items: center;
         width: 100%;         /* Vollbreite für Text und Bild */
         padding: 20px;
     }
     .image-content {
         margin-top: 20px;
         justify-content: center;
+		margin-right: -100px;
     }
 }
 
