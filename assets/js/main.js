@@ -399,17 +399,15 @@
 						content.style.maxHeight = "0px";
 						button.innerHTML = "<strong>Read more</strong>";
 
-						// Move button back above content
-						container.insertBefore(button, content);
+						// Button wieder zurück an seine ursprüngliche Position (überhalb von .collapsible-content)
+						content.parentNode.insertBefore(button, content);
 					} else {
 						content.appendChild(button);
 						button.innerHTML = "<strong>Read less</strong>";
+
 						setTimeout(() => {
 							content.style.maxHeight = content.scrollHeight + "px";
 						}, 10);
-
-						// Move button into the content at the bottom
-						content.appendChild(button);
 					}
 				});
 			});
