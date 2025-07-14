@@ -2971,11 +2971,6 @@ input, select, textarea {
   text-align: center;
 }
 
-.glance-section h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
 .glance-container {
   display: flex;
   justify-content: center;
@@ -3439,6 +3434,7 @@ input, select, textarea {
 
 #mein-button {
   background-color: #8785e6; /* Lila Hintergrund */
+  font-family: "Montserrat", "sans-serif";		/* SCHRIFT VERÄNDERN HIER */
   color: white;             /* Weißer Text */
   border: none;
   padding: 16px 32px;

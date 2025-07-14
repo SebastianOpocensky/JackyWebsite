@@ -2998,6 +2998,7 @@ input, select, textarea {
     justify-content: space-between;
     padding: 10px 0 50px 50px;
 	background-color: #8785e6;
+	overflow: visible;
 }
 
 /* Text-Container */
@@ -3005,6 +3006,7 @@ input, select, textarea {
     flex: 1;
     max-width: 50%;
     text-align: left;
+	
 	
 }
 
@@ -3091,7 +3093,7 @@ input, select, textarea {
 }
 
 
-/* ABOUT SECTION COLLAPSIBLE CONTENT */
+/* works? ABOUT SECTION COLLAPSIBLE CONTENT */
 .collapsible-content {
   max-height: 0;
   overflow: hidden;
@@ -3128,7 +3130,8 @@ Retreat Sektion
 
 .text-content {
     flex: 1 1 60%;           /* Text erhält ~60% der Breite */
-    padding-left: 30px;
+	padding: 40px 100px;	/*Padding Top/Bottom Left/Right */
+    
 }
 
 .image-content {
@@ -3319,11 +3322,6 @@ Responsives Verhalten
   background-color: #d5d6fe;
 }
 
-.section-header h2 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
 .section-header p {
   font-size: 1.2rem;
   color: #555;
@@ -3355,11 +3353,15 @@ Responsives Verhalten
 .grid-item.from-left.visible {
   opacity: 1;
   transform: translateX(0);
+  background-color: #fec065;
+  border-radius: 20px;
 }
 
 .grid-item.from-right.visible {
   opacity: 1;
   transform: translateX(0);
+  background-color: #fec065;
+  border-radius: 40px;
 }
 
 .from-left {
