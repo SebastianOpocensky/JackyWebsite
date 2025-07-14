@@ -402,8 +402,11 @@
 						// Move button back above content
 						container.insertBefore(button, content);
 					} else {
-						content.style.maxHeight = content.scrollHeight + "px";
+						content.appendChild(button);
 						button.innerHTML = "<strong>Read less</strong>";
+						setTimeout(() => {
+							content.style.maxHeight = content.scrollHeight + "px";
+						}, 10);
 
 						// Move button into the content at the bottom
 						content.appendChild(button);

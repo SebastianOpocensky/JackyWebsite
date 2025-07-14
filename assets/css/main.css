@@ -2998,6 +2998,7 @@ input, select, textarea {
     justify-content: space-between;
     padding: 10px 0 50px 50px;
 	background-color: #8785e6;
+	overflow: visible;
 }
 
 /* Text-Container */
@@ -3005,6 +3006,7 @@ input, select, textarea {
     flex: 1;
     max-width: 50%;
     text-align: left;
+	
 	
 }
 
