@@ -3104,6 +3104,10 @@ input, select, textarea {
 .collapsible-button {
 	font-family: 'Montserrat', sans-serif;
 	background-color: #d5d6fe;
+	padding: 0px 20px; /* reduced top/bottom padding */
+	font-size: 22px;
+	cursor: pointer;
+	border-radius: 45px;
 }
 
 

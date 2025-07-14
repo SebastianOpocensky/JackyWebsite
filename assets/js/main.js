@@ -380,13 +380,13 @@
 							setTimeout(() => {
 								extraTextAbout.classList.add('active');
 							}, 10);
-							readMoreLinkAbout.textContent = 'Read less';
+							readMoreLinkAbout.textContent = 'READ LESS';
 						} else {
 							extraTextAbout.classList.remove('active');
 							setTimeout(() => {
 								extraTextAbout.classList.remove('show');
 							}, 800);
-							readMoreLinkAbout.textContent = 'Read more';
+							readMoreLinkAbout.textContent = 'READ MORE';
 						}
 					});
 				}
@@ -397,13 +397,13 @@
 
 					if (isOpen) {
 						content.style.maxHeight = "0px";
-						button.innerHTML = "<strong>Read more</strong>";
+						button.innerHTML = "<strong>READ MORE</strong>";
 
 						// Button wieder zurück an seine ursprüngliche Position (überhalb von .collapsible-content)
 						content.parentNode.insertBefore(button, content);
 					} else {
 						content.appendChild(button);
-						button.innerHTML = "<strong>Read less</strong>";
+						button.innerHTML = "<strong>READ LESS</strong>";
 
 						setTimeout(() => {
 							content.style.maxHeight = content.scrollHeight + "px";
