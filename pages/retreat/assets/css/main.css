@@ -2971,11 +2971,6 @@ input, select, textarea {
   text-align: center;
 }
 
-.glance-section h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
 .glance-container {
   display: flex;
   justify-content: center;
