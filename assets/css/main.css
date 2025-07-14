@@ -3130,7 +3130,8 @@ Retreat Sektion
 
 .text-content {
     flex: 1 1 60%;           /* Text erhält ~60% der Breite */
-    padding-left: 30px;
+	padding: 40px 100px;	/*Padding Top/Bottom Left/Right */
+    
 }
 
 .image-content {
@@ -3357,11 +3358,15 @@ Responsives Verhalten
 .grid-item.from-left.visible {
   opacity: 1;
   transform: translateX(0);
+  background-color: #fec065;
+  border-radius: 20px;
 }
 
 .grid-item.from-right.visible {
   opacity: 1;
   transform: translateX(0);
+  background-color: #fec065;
+  border-radius: 40px;
 }
 
 .from-left {
