@@ -4,6 +4,8 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+const enableGridAnimation = false;
+
 (function($) {
 
 	var	$window = $(window),
@@ -462,7 +464,7 @@
 				}
 				});
 
-			//Offers Grid Items fly in animation
+			 //Offers Grid Items fly in animation
 			document.addEventListener("DOMContentLoaded", () => {
 				const items = document.querySelectorAll(".grid-item");
 
@@ -478,8 +480,10 @@
 				{ threshold: 0.2 }
 				);
 
-				items.forEach(item => observer.observe(item));
+				items.forEach(item => observer.observe(item)); 
 			});
+
+			
 
 
 			
