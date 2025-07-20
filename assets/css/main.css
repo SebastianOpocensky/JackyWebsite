@@ -3359,7 +3359,7 @@ Responsives Verhalten
 .grid-item {
   background-color: #fec065;
   padding: 1.5rem;
-  opacity: 0;
+  opacity: 1;
   transform: translateX(0);
   transition: all 2.8s ease-out;
 }
@@ -3384,6 +3384,7 @@ Responsives Verhalten
   border-radius: 40px;
 }
 
+/*
 .from-left {
   transform: translateX(-100px);
 }
@@ -3391,6 +3392,7 @@ Responsives Verhalten
 .from-right {
   transform: translateX(100px);
 }
+*/
 
 @media (max-width: 600px) {
   .grid-container {
