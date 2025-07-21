@@ -4,6 +4,8 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+const enableGridAnimation = false;
+
 (function($) {
 
 	var	$window = $(window),
@@ -264,6 +266,8 @@
 				const image = document.querySelector('.mission-image');
 				const heading = document.querySelector('.mission-heading');
 				const text = document.querySelector('.mission-text');
+				const button = document.querySelector(".collapsible-button2");
+				const content = document.querySelector(".collapsible-content2");
 				
 
 				// Funktion, um zu prüfen, ob ein Element im Sichtfeld ist
@@ -301,6 +305,27 @@
 					heading.classList.remove('active');
 					text.classList.remove('active');
 				}
+
+				//Mission Section Collabsible Text
+				button.addEventListener("click", function () {
+					const isOpen = content.style.maxHeight && content.style.maxHeight !== "0px";
+
+					if (isOpen) {
+						content.style.maxHeight = "0px";
+						button.innerHTML = "<strong>READ MORE</strong>";
+
+						// Button wieder zurück an seine ursprüngliche Position (überhalb von .collapsible-content)
+						content.parentNode.insertBefore(button, content);
+					} else {
+						content.appendChild(button);
+						button.innerHTML = "<strong>READ LESS</strong>";
+
+						setTimeout(() => {
+							content.style.maxHeight = content.scrollHeight + "px";
+						}, 10);
+					}
+				});
+
 			});
 
 			document.addEventListener('DOMContentLoaded', () => {
@@ -339,6 +364,7 @@
 				const text = document.querySelector('.about-text');
 				const button = document.querySelector(".collapsible-button");
 				const content = document.querySelector(".collapsible-content");
+				
 				
 
 				// Funktion, um zu prüfen, ob ein Element im Sichtfeld ist
@@ -462,7 +488,7 @@
 				}
 				});
 
-			//Offers Grid Items fly in animation
+			 //Offers Grid Items fly in animation
 			document.addEventListener("DOMContentLoaded", () => {
 				const items = document.querySelectorAll(".grid-item");
 
@@ -478,8 +504,10 @@
 				{ threshold: 0.2 }
 				);
 
-				items.forEach(item => observer.observe(item));
+				items.forEach(item => observer.observe(item)); 
 			});
+
+			
 
 
 			

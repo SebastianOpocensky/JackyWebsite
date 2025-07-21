@@ -2988,6 +2988,22 @@ input, select, textarea {
     transform: translateX(0);
 }
 
+.collapsible-content2 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+/* Button Extends Text */
+.collapsible-button2 {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #d5d6fe;
+	padding: 0px 20px; /* reduced top/bottom padding */
+	font-size: 22px;
+	cursor: pointer;
+	border-radius: 45px;
+}
+
 
 /* About Section */
 
@@ -3093,7 +3109,7 @@ input, select, textarea {
 }
 
 
-/* works? ABOUT SECTION COLLAPSIBLE CONTENT */
+/* ABOUT SECTION COLLAPSIBLE CONTENT */
 .collapsible-content {
   max-height: 0;
   overflow: hidden;
@@ -3341,9 +3357,9 @@ Responsives Verhalten
 }
 
 .grid-item {
-  background-color: #d5d6fe;
+  background-color: #fec065;
   padding: 1.5rem;
-  opacity: 0;
+  opacity: 1;
   transform: translateX(0);
   transition: all 2.8s ease-out;
 }
@@ -3368,6 +3384,7 @@ Responsives Verhalten
   border-radius: 40px;
 }
 
+/*
 .from-left {
   transform: translateX(-100px);
 }
@@ -3375,6 +3392,7 @@ Responsives Verhalten
 .from-right {
   transform: translateX(100px);
 }
+*/
 
 @media (max-width: 600px) {
   .grid-container {
