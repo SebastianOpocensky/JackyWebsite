@@ -2764,129 +2764,6 @@ input, select, textarea {
   }
 }
 
-.logo-title {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.logo-title img {
-  height: 40px;
-  width: auto;
-}
-
-#dropdownMenu {
-    display: none;
-    position: absolute;
-    top: 60px;
-    left: 10px;
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 10px;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-#dropdownMenu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#dropdownMenu li {
-    margin: 8px 0;
-}
-
-#dropdownMenu a {
-    text-decoration: none;
-    color: #333;
-}
-
-.hidden {
-    display: none;
-}
-
-.visible {
-    display: block;
-}
-
-
-#mainNav {
-	display: none; /* Startzustand: versteckt */
-}
-
-#mainNav.active {
-	display: block; /* Wird durch JS aktiviert */
-}
-
-
-/* Standardzustand: Menü verstecken (mobil) */
-@media screen and (max-width: 768px) {
-  #mainNav {
-    display: none;
-    flex-direction: column;
-    background: white;
-    padding: 1em;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-
-  #header.menu-open #mainNav {
-    display: flex;
-  }
-}
-
-#dropdownMenu {
-    display: none;
-    position: absolute;
-    top: 3em; /* Höhe des Headers, passt zu header height */
-    left: 0;
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 10px;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    width: 200px; /* Feste Breite für Konsistenz */
-}
-
-#dropdownMenu.visible {
-    display: block;
-}
-
-#dropdownMenu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#dropdownMenu li {
-    margin: 8px 0;
-}
-
-#dropdownMenu a {
-    text-decoration: none;
-    color: #333;
-    display: block;
-    padding: 5px 10px;
-}
-
-#dropdownMenu a:hover {
-    background-color: #f5f6f7;
-    color: #98c593; /* Passt zur Link-Farbe der Website */
-}
-
-/* Responsives Design */
-@media screen and (max-width: 736px) {
-    #dropdownMenu {
-        top: 2.5em; /* Passt zur reduzierten Header-Höhe */
-        width: 100%; /* Volle Breite auf kleinen Bildschirmen */
-        left: 0;
-    }
-}
-
 
 /* Neue Mission Section */
 
@@ -3430,3 +3307,143 @@ Responsives Verhalten
 
 
 
+/*Navbar Logo*/
+
+/* Menü-Button mit Logo */
+#menuToggle {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Standard: Desktop-Logo sichtbar */
+.logo-desktop {
+  display: block;
+  width: 100px;
+  height: auto;
+}
+
+/* Standard: Mobile-Logo unsichtbar */
+.logo-mobile {
+  display: none;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+}
+
+/* Mobile: Nur Mobile-Logo sichtbar */
+@media screen and (max-width: 768px) {
+  .logo-desktop {
+    display: none !important;
+  }
+
+  .logo-mobile {
+    display: block !important;
+  }
+}
+
+/* Dropdown-Menü */
+#dropdownMenu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px;
+}
+
+#dropdownMenu.visible {
+  display: block;
+}
+
+#dropdownMenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#dropdownMenu li {
+  margin: 8px 0;
+}
+
+#dropdownMenu a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 5px 10px;
+}
+
+#dropdownMenu a:hover {
+  background-color: #f5f6f7;
+  color: #98c593;
+}
+
+/* Dropdown-Menü mobil */
+@media screen and (max-width: 736px) {
+  #dropdownMenu {
+    top: 2.5em;
+    width: 100%;
+    left: 0;
+  }
+}
+
+/* Navigation verstecken */
+#mainNav {
+  display: none;
+}
+
+#mainNav.active {
+  display: block;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Abstand zwischen Logo und Button */
+  padding: 0px 9px 9px 9px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Navigation mobil */
+@media screen and (max-width: 768px) {
+  #mainNav {
+    display: none;
+    flex-direction: column;
+    background: white;
+    padding: 1em;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  #header.menu-open #mainNav {
+    display: flex;
+  }
+
+  .nav-container {
+	justify-content: flex-end;
+  }
+
+}
+
+/* Hilfsklassen */
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
