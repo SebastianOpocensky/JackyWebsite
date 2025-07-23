@@ -2147,6 +2147,9 @@ input, select, textarea {
 				background: #ebe2d7;			/*HINTERGRUNDFARBE HIER ÄNDERN */
 			}
 
+			#contact p {
+				margin: 0;
+				}
 
 
 		/*===================OFFER SECTION BELOW===============*/
