@@ -834,19 +834,21 @@ input, select, textarea {
 			}
 
 			.logo-img {
-			width: 150px; /* Standardgröße für Desktop */
+			width: 100px; /* Standardgröße für Desktop */
 			height: auto;
 			}
 
 			@media (max-width: 768px) {
 				.logo-img {
-					width: 100px; /* kleinere Größe für Tablets und Smartphones */
+					width: 80px; /* kleinere Größe für Tablets und Smartphones */
+					overflow: hidden;
 				}
 			}
 
 			@media (max-width: 480px) {
 				.logo-img {
-					width: 80px; /* noch kleiner für kleine Smartphones */
+					width: 60px; /* noch kleiner für kleine Smartphones */
+					overflow: hidden;
 				}
 			}
 

@@ -814,7 +814,7 @@ input, select, textarea {
 				font-weight: 600;
 			}
 
-													/* BUTTON NAVBAR */
+			/* BUTTON NAVBAR */
 			#menuToggle {
 				background: none;
 				border: none;
@@ -824,19 +824,21 @@ input, select, textarea {
 			}
 
 			.logo-img {
-			width: 150px; /* Desktop */
+			width: 100px; /* Standardgröße für Desktop */
 			height: auto;
 			}
 
 			@media (max-width: 768px) {
 				.logo-img {
-					width: 100px; /* Tablets und Smartphones */
+					width: 80px; /* kleinere Größe für Tablets und Smartphones */
+					overflow: hidden;
 				}
 			}
 
 			@media (max-width: 480px) {
 				.logo-img {
-					width: 80px; /* kleine Smartphones */
+					width: 60px; /* noch kleiner für kleine Smartphones */
+					overflow: hidden;
 				}
 			}
 
