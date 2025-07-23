@@ -3325,7 +3325,7 @@ Responsives Verhalten
 /* Standard: Desktop-Logo sichtbar */
 .logo-desktop {
   display: block;
-  width: 100px;
+  width: 60px;
   height: auto;
 }
 
