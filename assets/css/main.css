@@ -3001,12 +3001,23 @@ input, select, textarea {
 
 /* Button Extends Text */
 .collapsible-button2 {
-	font-family: 'Montserrat', sans-serif;
-	background-color: #d5d6fe;
-	padding: 0px 20px; /* reduced top/bottom padding */
-	font-size: 22px;
+	background-color: #d5d6fe;          
+	font-family: 'Montserrat', sans-serif; /* Gleiche Schrift */
+	border: none;
+	padding: 25px 50px;                 /* Gleiche Größe wie #mein-button */
+	font-size: 16px;                    /* Gleiche Schriftgröße */
 	cursor: pointer;
-	border-radius: 45px;
+	border-radius: 40px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+	transition: background-color 0.3s ease;
+	text-decoration: none;
+
+	display: inline-flex;
+	align-items: center;              
+	justify-content: center;         
+	line-height: 1;                  
+	text-align: center;
+	height: auto;
 }
 
 
@@ -3123,7 +3134,7 @@ input, select, textarea {
 
 /* Button Extends Text */
 .collapsible-button {
-	background-color: #d5d6fe;          /* Lila Hintergrund */
+	background-color: #d5d6fe;          
 	font-family: 'Montserrat', sans-serif; /* Gleiche Schrift */
 	border: none;
 	padding: 25px 50px;                 /* Gleiche Größe wie #mein-button */
