@@ -2388,6 +2388,7 @@ input, select, textarea {
 
 @media (max-width: 768px) {			/*Change to support mobile devices here */
   .about-section img {
+	width: 180%;
     object-fit: cover;
 	max-height: 300px;
   }
