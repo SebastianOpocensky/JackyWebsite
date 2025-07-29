@@ -3324,9 +3324,10 @@ Responsives Verhalten
 
 /* Standard: Desktop-Logo sichtbar */
 .logo-desktop {
-  display: block;
-  width: 60px;
+  display: flex;
+  width: 100px;
   height: auto;
+  margin-top: 0.5rem;
 }
 
 /* Standard: Mobile-Logo unsichtbar */
